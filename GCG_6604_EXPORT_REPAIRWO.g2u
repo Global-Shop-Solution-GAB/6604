@@ -1,0 +1,167 @@
+﻿Program.Sub.Preflight.Start
+v.Global.sJob.Declare(String)
+v.Global.sSuffix.Declare(String)
+Program.Sub.Preflight.End
+
+'ARC#6604
+'Customer: LHD Equipment
+'Custom hook
+'	Jan 2021, Nam Le
+
+
+'LHD Equipment is looking for a way to input their inspection breakdown reports for repair work orders.
+'This data is ultimately used for generating a quote to the customer and determining the labor and
+'materials needed for the repair. This needs to be an input screen run asynchronously from the GUI
+'and will include a new menu item to export the data by work order to an excel spreadsheet. This script
+'will need to function on both the old GUI and the new SFDC.
+
+'This script allow user to choose a Repair WO and print to Excel
+
+Program.Sub.Main.Start
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	v.Local.sTemp.Declare(String)
+	v.Local.sJob.Declare(String)
+	
+	v.Local.sSQL.Set("Select JOB, SUFFIX from GCG_6604_WOHDR")
+
+	f.Intrinsic.UI.SetBrowserHotTypeAhead(true)
+	
+	f.ODBC.Connection!Con.OpenCompanyConnection
+		f.Intrinsic.UI.Browser("JOB", "con", v.Local.sSQL, "JOB*!*SUFFIX", "100*!*50", V.Local.sRet)
+	f.ODBC.Connection!Con.Close
+	
+	f.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+		'Job, Suffix
+		f.Intrinsic.String.Split(v.Local.sRet, "*!*", v.Local.sRet)
+		v.Global.sJob.Set(v.Local.sRet(0))
+		v.Global.sSuffix.Set(v.Local.sRet(1))
+		f.Intrinsic.Control.CallSub(ExportToExcel)
+	f.Intrinsic.Control.EndIf
+		
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.ExportToExcel.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	v.Local.sFileTemplate.Declare(String)
+	v.Local.sFileOutput.Declare(String)
+	v.Local.sHeaderName.Declare(String)
+	v.Local.sHeaderField.Declare(String)
+	v.Local.sLaborHeader.Declare(String)
+	v.Local.sLaborField.Declare(String)
+	v.Local.sMatHeader.Declare(String)
+	v.Local.sMatField.Declare(String)
+	v.Local.sEmpIN.Declare(String)
+	v.Local.sTemp.Declare(String)
+	v.Local.sIN1.Declare(String)
+	v.Local.sIN2.Declare(String)
+	v.Local.sEmpName.Declare(String)
+	v.Local.sEmpID.Declare(String)
+	v.Local.sDate.Declare(String)
+	v.Local.sExportData.Declare(String)
+	
+	'This command writes an entire spreadsheet from a triple-delimited string. 
+	'The sheet delimiter is 		&^&, 
+	'the row delimiter is 			$!$, 
+	'and the column delimiter is	*!*
+	', using a template for formatting
+	'Format:
+	'	HEADER$!$ColumnHeader$!$Labor 
+	'	&^&HEADER$!$ColumnHeader$!$Material
+	f.ODBC.Connection!Con.OpenCompanyConnection
+		
+		'HEADER and HEADER FIELDS
+		'--------------------------------------
+		v.Local.sHeaderName.Set("JOB NO*!*SERIAL NO*!*PREV*!*T.R.*!*PN#*!*DESC.*!*CUSTOMER*!*EMPID*!*INIT*!*DATE*!*RET*!*EXT")
+	
+		f.Intrinsic.String.Build("select RTRIM(H.EMPID) EMPID, RTRIM(H.PART) PART, H.RPDATE, RTRIM(H.PREV) PREV, RTRIM(H.TR) TR, RTRIM(H.RET) RET, RTRIM(H.EXT) EXT, RTRIM(C.NAME_CUSTOMER) CUSTOMER, RTRIM(J.DESCRIPTION) DESCRIPTION, RTRIM(SERIAL_NO) SERIAL, RTRIM(H.JOB), RTRIM(H.SUFFIX) from GCG_6604_WOHDR H left join V_CUSTOMER_MASTER C on RTRIM(C.CUSTOMER) = RTRIM(H.CUSTID) left join V_JOB_HEADER J on RTRIM(J.JOB) = RTRIM(H.JOB) and RTRIM(J.SUFFIX) = RTRIM(H.SUFFIX) where RTRIM(H.JOB)='{0}' and RTRIM(H.SUFFIX)='{1}'", v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		v.Local.sRet.Set("")
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRet)
+		f.Intrinsic.String.Split(v.Local.sRet,"*!*", v.Local.sRet)
+		
+		'EMP INIT
+		v.Local.sEmpID.Set(v.Local.sRet(0))
+		f.Intrinsic.String.Build("select RTRIM(NAME) from V_EMPLOYEE_MSTR where RTRIM(EMPLOYEE)='{0}'", v.Local.sEMPID.Trim, v.Local.sSQL)
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sEmpName)
+		f.Intrinsic.String.Split(v.Local.sEmpName," ", v.Local.sTemp)
+		f.Intrinsic.Control.If(v.Local.sTemp.UBound,>,0)
+			f.Intrinsic.String.Left(v.Local.sTemp(0),1,v.Local.sIN1)
+			f.Intrinsic.String.Left(v.Local.sTemp(v.Local.sTemp.UBound),1,v.Local.sIN2)
+			f.Intrinsic.String.Build("{0}{1}", v.Local.sIN1, v.Local.sIN2, v.Local.sEmpIN)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.String.Left(v.Local.sTemp,1,v.Local.sEmpIN)
+		f.Intrinsic.Control.EndIf
+		
+		'Date
+		f.Intrinsic.String.Format(v.Local.sRet(2), "MM/DD/YYYY", v.Local.sDate)
+		
+		'concat
+		f.Intrinsic.String.Build("{0}-{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}*!*{8}*!*{9}", v.Local.sRet(10), v.Local.sRet(11), v.Local.sRet(9), v.Local.sRet(3), v.Local.sRet(4), v.Local.sRet(1), v.Local.sRet(8), v.Local.sRet(7), v.Local.sRet(0), v.Local.sEmpIN, v.Local.sDate, v.Local.sRet(5), v.Local.sRet(6), v.Local.sHeaderField)
+		
+		'---------------------------------------
+		
+		
+		
+		'Labor
+		'---------------------------------------
+		v.Local.sLaborHeader.Set("SEQ*!*OPERATION*!*EMPID*!*TIME")
+		f.Intrinsic.String.Build("select RTRIM(SEQ), RTRIM(OPERATION), RTRIM(EMPID), TIME from GCG_6604_LABOR where TIME>0 and RTRIM(JOB)='{0}' and RTRIM(SUFFIX)='{1}'", v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sLaborField)
+		f.Intrinsic.Control.If(v.Local.sLaborField,!=,"")
+			f.Intrinsic.String.Replace(v.Local.sLaborField,"#$#", "$!$", v.Local.sLaborField)
+		f.Intrinsic.Control.EndIf
+		
+		'---------------------------------------
+		
+		
+		
+		'Materials
+		'---------------------------------------
+		v.Local.sMatHeader.Set("*!*PART*!*STATUS*!*COMMENT")
+		f.Intrinsic.String.Build("select '' SEQ, RTRIM(PART), RTRIM(STATUS), RTRIM(COMMENT) from GCG_6604_MTRL where RTRIM(STATUS)<> 'OK' and RTRIM(JOB)='{0}' and RTRIM(SUFFIX)='{1}'", v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sMatField)
+		f.Intrinsic.Control.If(v.Local.sMatField,!=,"")
+			f.Intrinsic.String.Replace(v.Local.sMatField,"#$#", "$!$", v.Local.sMatField)
+		f.Intrinsic.Control.EndIf
+		
+		'---------------------------------------
+		
+	f.ODBC.Connection!Con.Close
+	
+'	f.Intrinsic.String.Replace(v.Local.sRet, "#$#", "$!$", v.Local.sRet)
+'	f.Intrinsic.String.Concat("&^&",v.Local.sRet, v.Local.sRet)
+	
+	'final file
+	f.Intrinsic.String.Build("{0}$!${1}$!$$!${2}$!${3}&^&{0}$!${1}$!$$!${4}$!${5}", v.Local.sHeaderName, v.Local.sHeaderField, v.Local.sLaborHeader, v.Local.sLaborField, v.Local.sMatHeader, v.Local.sMatField, v.Local.sExportData)
+	
+	f.Intrinsic.String.Build("{0}\{1}\{2}", v.Caller.FilesDir, "6604\Template", "6604.xlsx", v.Local.sFileTemplate)
+	f.Intrinsic.String.Build("{0}\{1}\{2}-{3} {4}{5}.xlsx", v.Caller.FilesDir, "6604\Output", v.Global.sJob, v.Global.sSuffix, v.Caller.User, v.Ambient.Now.FormatYYYYMMDD-HHNNSS, v.Local.sFileOutput)
+	
+	f.Automation.MSExcel.WriteSpreadsheet(v.Local.sFileOutput, v.Local.sFileTemplate, v.Local.sExportData)
+	f.Intrinsic.Task.ShellExec(0,"",v.Local.sFileOutput,"","",1)
+	
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.ExportToExcel.End
+
+Program.Sub.Catching.Start
+f.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+Program.Sub.Catching.End
+
+Program.Sub.Unload.Start
+	f.Intrinsic.Control.End
+Program.Sub.Unload.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$nle$}$20220223211253857$}$kjzCRYkA6UEoRnCwndYnRbFO/s06+5AM10UASYEYcItyTt97PQzqAaaKKDQbC0AJ
+Program.Sub.Comments.End
