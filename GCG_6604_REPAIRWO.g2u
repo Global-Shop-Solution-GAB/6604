@@ -1,0 +1,1931 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.Form..Create(BaseForm)
+Gui.Form..Caption("Form")
+Gui.Form..Size(1242,845)
+Gui.Form..MinX(0)
+Gui.Form..MinY(0)
+Gui.Form..Position(0,0)
+Gui.Form..AlwaysOnTop(False)
+Gui.Form..FontName("Tahoma")
+Gui.Form..FontSize(8.25)
+Gui.Form..ControlBox(True)
+Gui.Form..MaxButton(True)
+Gui.Form..MinButton(True)
+Gui.Form..MousePointer(0)
+Gui.Form..Moveable(True)
+Gui.Form..Sizeable(True)
+Gui.Form..ShowInTaskBar(True)
+Gui.Form..TitleBar(True)
+Gui.Form..Event(UnLoad,Unload)
+Gui.Form.lbl1.Create(Label,"PN#:",True,25,13,0,63,18,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl1.BorderStyle(0)
+Gui.Form.lbl2.Create(Label,"DESC.:",True,34,13,0,55,37,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl2.BorderStyle(0)
+Gui.Form.lblPartDesc.Create(Label,"DESC.",True,30,13,0,95,37,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblPartDesc.BorderStyle(0)
+Gui.Form.lblPart.Create(Label,"PART",True,26,13,0,98,17,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblPart.BorderStyle(0)
+Gui.Form.lbl5.Create(Label,"JOB NO.:",True,45,13,0,234,18,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl5.BorderStyle(0)
+Gui.Form.lblJobSuffix.Create(Label,"WO#",True,26,13,0,288,18,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblJobSuffix.BorderStyle(0)
+Gui.Form.lbl7.Create(Label,"SERIAL NO.:",True,61,13,0,555,16,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl7.BorderStyle(0)
+Gui.Form.lbl9.Create(Label,"PREV.",True,29,13,0,407,15,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl9.BorderStyle(0)
+Gui.Form.txtPREV.Create(TextBox,"",True,100,20,0,443,11,True,0,"Tahoma",8.25,,1)
+Gui.Form.lbl10.Create(Label,"T.R.",True,21,13,0,414,40,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl10.BorderStyle(0)
+Gui.Form.txtTR.Create(TextBox,"",True,100,20,0,443,35,True,0,"Tahoma",8.25,,1)
+Gui.Form.lbl11.Create(Label,"CUSTOMER:",True,59,13,0,30,58,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl11.BorderStyle(0)
+Gui.Form.lblCustomer.Create(Label,"CUSTOMER",True,55,13,0,95,58,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblCustomer.BorderStyle(0)
+Gui.Form.lbla4.Create(Label,"INSPECTION BY: EMP#",True,111,13,0,11,82,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbla4.BorderStyle(0)
+Gui.Form.lblEMPID.Create(Label,"EMPID",True,31,13,0,127,82,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblEMPID.BorderStyle(0)
+Gui.Form.lbl15.Create(Label,"INIT:",True,25,13,0,169,82,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl15.BorderStyle(0)
+Gui.Form.lblEmpIN.Create(Label,"INT",True,17,13,0,200,82,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblEmpIN.BorderStyle(0)
+Gui.Form.lbl17.Create(Label,"DATE:",True,30,13,0,234,82,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl17.BorderStyle(0)
+Gui.Form.lblDate.Create(Label,"Label",True,25,13,0,272,82,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblDate.BorderStyle(0)
+Gui.Form.lbl19.Create(Label,"RET:",True,23,13,0,415,80,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl19.BorderStyle(0)
+Gui.Form.txtRET.Create(TextBox,"",True,100,20,0,443,76,True,0,"Tahoma",8.25,,1)
+Gui.Form.lbl20.Create(Label,"EXT:",True,22,13,0,595,80,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl20.BorderStyle(0)
+Gui.Form.txtEXT.Create(TextBox,"",True,100,20,0,622,76,True,0,"Tahoma",8.25,,1)
+Gui.Form.cmdSave.Create(Button)
+Gui.Form.cmdSave.Enabled(True)
+Gui.Form.cmdSave.Visible(True)
+Gui.Form.cmdSave.Zorder(0)
+Gui.Form.cmdSave.Size(75,23)
+Gui.Form.cmdSave.Position(25,394)
+Gui.Form.cmdSave.Caption("SAVE")
+Gui.Form.cmdSave.FontName("Tahoma")
+Gui.Form.cmdSave.FontSize(8.25)
+Gui.Form.cmdSave.Event(Click,cmdSave_Click)
+Gui.Form.SplitContainer1.Create(SplitContainer)
+Gui.Form.SplitContainer1.Enabled(True)
+Gui.Form.SplitContainer1.Visible(True)
+Gui.Form.SplitContainer1.Zorder(0)
+Gui.Form.SplitContainer1.Size(903,669)
+Gui.Form.SplitContainer1.Position(146,136)
+Gui.Form.SplitContainer1.Orientation(1)
+Gui.Form.SplitContainer1.SplitterPosition(542)
+Gui.Form.SplitContainer1.Collapsed(False)
+Gui.Form.SplitContainer1.CollapsiblePanel(0)
+Gui.Form.lbl31.Create(Label,"PACKING GLAND",True,80,13,0,491,137,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl31.BorderStyle(0)
+Gui.Form.lbl31.Anchor(7)
+Gui.Form.lbl31.Parent("SplitContainer1",1)
+Gui.Form.lbl42.Create(Label,"WELDING INCORRECT",True,108,13,0,464,454,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl42.BorderStyle(0)
+Gui.Form.lbl42.Anchor(7)
+Gui.Form.lbl42.Parent("SplitContainer1",1)
+Gui.Form.txtStemEye.Create(TextBox,"",True,100,20,0,740,82,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtStemEye.Parent("SplitContainer1",1)
+Gui.Form.lbl36.Create(Label,"GLAND BUSHING",True,80,13,0,51,322,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl36.BorderStyle(0)
+Gui.Form.lbl36.Anchor(7)
+Gui.Form.lbl36.Parent("SplitContainer1",1)
+Gui.Form.txtGlandBushing.Create(TextBox,"",True,100,20,0,293,318,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtGlandBushing.Parent("SplitContainer1",1)
+Gui.Form.lbl41.Create(Label,"GLAND (OD) SEAL LEAK",True,113,13,0,458,322,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl41.BorderStyle(0)
+Gui.Form.lbl41.Anchor(7)
+Gui.Form.lbl41.Parent("SplitContainer1",1)
+Gui.Form.ddlLocknut.Create(DropDownList)
+Gui.Form.ddlLocknut.Enabled(True)
+Gui.Form.ddlLocknut.Visible(True)
+Gui.Form.ddlLocknut.Zorder(0)
+Gui.Form.ddlLocknut.Size(140,20)
+Gui.Form.ddlLocknut.Position(136,266)
+Gui.Form.ddlLocknut.Anchor(7)
+Gui.Form.ddlLocknut.FontName("Tahoma")
+Gui.Form.ddlLocknut.FontSize(8.25)
+Gui.Form.ddlLocknut.Parent("SplitContainer1",1)
+Gui.Form.txtBarrel.Create(TextBox,"",True,100,20,0,293,134,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtBarrel.Parent("SplitContainer1",1)
+Gui.Form.ddl1Bolts.Create(DropDownList)
+Gui.Form.ddl1Bolts.Enabled(True)
+Gui.Form.ddl1Bolts.Visible(True)
+Gui.Form.ddl1Bolts.Zorder(0)
+Gui.Form.ddl1Bolts.Size(106,20)
+Gui.Form.ddl1Bolts.Position(138,396)
+Gui.Form.ddl1Bolts.Anchor(7)
+Gui.Form.ddl1Bolts.FontName("Tahoma")
+Gui.Form.ddl1Bolts.FontSize(8.25)
+Gui.Form.ddl1Bolts.Parent("SplitContainer1",1)
+Gui.Form.lbl37.Create(Label,"SEALS",True,30,13,0,101,348,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl37.BorderStyle(0)
+Gui.Form.lbl37.Anchor(7)
+Gui.Form.lbl37.Parent("SplitContainer1",1)
+Gui.Form.lbl32.Create(Label,"STEM EYE BUSHING",True,94,13,0,475,112,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl32.BorderStyle(0)
+Gui.Form.lbl32.Anchor(7)
+Gui.Form.lbl32.Parent("SplitContainer1",1)
+Gui.Form.lbl24.Create(Label,"STROKE RESTRICTOR",True,106,13,0,22,175,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl24.BorderStyle(0)
+Gui.Form.lbl24.Anchor(7)
+Gui.Form.lbl24.Parent("SplitContainer1",1)
+Gui.Form.lbl54.Create(Label,"COMMENTS",True,56,13,0,759,63,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl54.BorderStyle(0)
+Gui.Form.lbl54.Anchor(7)
+Gui.Form.lbl54.Parent("SplitContainer1",1)
+Gui.Form.ddlRodBearing.Create(DropDownList)
+Gui.Form.ddlRodBearing.Enabled(True)
+Gui.Form.ddlRodBearing.Visible(True)
+Gui.Form.ddlRodBearing.Zorder(0)
+Gui.Form.ddlRodBearing.Size(106,20)
+Gui.Form.ddlRodBearing.Position(137,292)
+Gui.Form.ddlRodBearing.Anchor(7)
+Gui.Form.ddlRodBearing.FontName("Tahoma")
+Gui.Form.ddlRodBearing.FontSize(8.25)
+Gui.Form.ddlRodBearing.Parent("SplitContainer1",1)
+Gui.Form.lbl23.Create(Label,"BARREL",True,38,13,0,90,137,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl23.BorderStyle(0)
+Gui.Form.lbl23.Anchor(7)
+Gui.Form.lbl23.Parent("SplitContainer1",1)
+Gui.Form.lbl48.Create(Label,"PHOTO ATTACHED",True,91,13,0,41,571,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl48.BorderStyle(0)
+Gui.Form.lbl48.Anchor(7)
+Gui.Form.lbl48.Parent("SplitContainer1",1)
+Gui.Form.ddlPhoto.Create(DropDownList)
+Gui.Form.ddlPhoto.Enabled(True)
+Gui.Form.ddlPhoto.Visible(True)
+Gui.Form.ddlPhoto.Zorder(0)
+Gui.Form.ddlPhoto.Size(140,20)
+Gui.Form.ddlPhoto.Position(139,539)
+Gui.Form.ddlPhoto.Anchor(7)
+Gui.Form.ddlPhoto.FontName("Tahoma")
+Gui.Form.ddlPhoto.FontSize(8.25)
+Gui.Form.ddlPhoto.Parent("SplitContainer1",1)
+Gui.Form.lbl28.Create(Label,"STEM",True,26,13,0,102,452,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl28.BorderStyle(0)
+Gui.Form.lbl28.Anchor(7)
+Gui.Form.lbl28.Parent("SplitContainer1",1)
+Gui.Form.ddlStem.Create(DropDownList)
+Gui.Form.ddlStem.Enabled(True)
+Gui.Form.ddlStem.Visible(True)
+Gui.Form.ddlStem.Zorder(0)
+Gui.Form.ddlStem.Size(140,20)
+Gui.Form.ddlStem.Position(138,450)
+Gui.Form.ddlStem.Anchor(7)
+Gui.Form.ddlStem.FontName("Tahoma")
+Gui.Form.ddlStem.FontSize(8.25)
+Gui.Form.ddlStem.Parent("SplitContainer1",1)
+Gui.Form.lbl29.Create(Label,"PHOTO",True,35,13,0,95,541,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl29.BorderStyle(0)
+Gui.Form.lbl29.Anchor(7)
+Gui.Form.lbl29.Parent("SplitContainer1",1)
+Gui.Form.lbl30.Create(Label,"STEM EYE",True,47,13,0,522,85,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl30.BorderStyle(0)
+Gui.Form.lbl30.Anchor(7)
+Gui.Form.lbl30.Parent("SplitContainer1",1)
+Gui.Form.ddlStemEye.Create(DropDownList)
+Gui.Form.ddlStemEye.Enabled(True)
+Gui.Form.ddlStemEye.Visible(True)
+Gui.Form.ddlStemEye.Zorder(0)
+Gui.Form.ddlStemEye.Size(140,20)
+Gui.Form.ddlStemEye.Position(578,82)
+Gui.Form.ddlStemEye.Anchor(7)
+Gui.Form.ddlStemEye.FontName("Tahoma")
+Gui.Form.ddlStemEye.FontSize(8.25)
+Gui.Form.ddlStemEye.Parent("SplitContainer1",1)
+Gui.Form.txtBolts.Create(TextBox,"",True,100,20,0,293,397,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtBolts.Parent("SplitContainer1",1)
+Gui.Form.txtExtrBypass.Create(TextBox,"",True,100,20,0,740,343,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtExtrBypass.Parent("SplitContainer1",1)
+Gui.Form.ddlStrokeRes.Create(DropDownList)
+Gui.Form.ddlStrokeRes.Enabled(True)
+Gui.Form.ddlStrokeRes.Visible(True)
+Gui.Form.ddlStrokeRes.Zorder(0)
+Gui.Form.ddlStrokeRes.Size(106,20)
+Gui.Form.ddlStrokeRes.Position(136,172)
+Gui.Form.ddlStrokeRes.Anchor(7)
+Gui.Form.ddlStrokeRes.FontName("Tahoma")
+Gui.Form.ddlStrokeRes.FontSize(8.25)
+Gui.Form.ddlStrokeRes.Parent("SplitContainer1",1)
+Gui.Form.txtStemStandard.Create(TextBox,"",True,100,20,0,740,520,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtStemStandard.Parent("SplitContainer1",1)
+Gui.Form.lbl33.Create(Label,"PISTON",True,37,13,0,531,177,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl33.BorderStyle(0)
+Gui.Form.lbl33.Anchor(7)
+Gui.Form.lbl33.Parent("SplitContainer1",1)
+Gui.Form.ddlPiston.Create(DropDownList)
+Gui.Form.ddlPiston.Enabled(True)
+Gui.Form.ddlPiston.Visible(True)
+Gui.Form.ddlPiston.Zorder(0)
+Gui.Form.ddlPiston.Size(140,20)
+Gui.Form.ddlPiston.Position(578,172)
+Gui.Form.ddlPiston.Anchor(7)
+Gui.Form.ddlPiston.FontName("Tahoma")
+Gui.Form.ddlPiston.FontSize(8.25)
+Gui.Form.ddlPiston.Parent("SplitContainer1",1)
+Gui.Form.ddlPhotoAttached.Create(DropDownList)
+Gui.Form.ddlPhotoAttached.Enabled(True)
+Gui.Form.ddlPhotoAttached.Visible(True)
+Gui.Form.ddlPhotoAttached.Zorder(0)
+Gui.Form.ddlPhotoAttached.Size(106,20)
+Gui.Form.ddlPhotoAttached.Position(139,567)
+Gui.Form.ddlPhotoAttached.Anchor(7)
+Gui.Form.ddlPhotoAttached.FontName("Tahoma")
+Gui.Form.ddlPhotoAttached.FontSize(8.25)
+Gui.Form.ddlPhotoAttached.Parent("SplitContainer1",1)
+Gui.Form.ddlPipingKit.Create(DropDownList)
+Gui.Form.ddlPipingKit.Enabled(True)
+Gui.Form.ddlPipingKit.Visible(True)
+Gui.Form.ddlPipingKit.Zorder(0)
+Gui.Form.ddlPipingKit.Size(140,20)
+Gui.Form.ddlPipingKit.Position(136,224)
+Gui.Form.ddlPipingKit.Anchor(7)
+Gui.Form.ddlPipingKit.FontName("Tahoma")
+Gui.Form.ddlPipingKit.FontSize(8.25)
+Gui.Form.ddlPipingKit.Parent("SplitContainer1",1)
+Gui.Form.txtSupervisor.Create(TextBox,"",True,64,20,0,578,407,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtSupervisor.Parent("SplitContainer1",1)
+Gui.Form.ddlAnchorBushing.Create(DropDownList)
+Gui.Form.ddlAnchorBushing.Enabled(True)
+Gui.Form.ddlAnchorBushing.Visible(True)
+Gui.Form.ddlAnchorBushing.Zorder(0)
+Gui.Form.ddlAnchorBushing.Size(140,20)
+Gui.Form.ddlAnchorBushing.Position(134,108)
+Gui.Form.ddlAnchorBushing.FontName("Tahoma")
+Gui.Form.ddlAnchorBushing.FontSize(8.25)
+Gui.Form.ddlAnchorBushing.Anchor(7)
+Gui.Form.ddlAnchorBushing.Parent("SplitContainer1",1)
+Gui.Form.lbl56.Create(Label,"LABORS",True,58,17,0,99,11,True,0,"Tahoma",10.25,,0,0)
+Gui.Form.lbl56.BorderStyle(0)
+Gui.Form.lbl56.Parent("SplitContainer1",0)
+Gui.Form.lbl56.FontStyle(True,False,False,False,False)
+Gui.Form.GsGcLabor.Create(GsGridControl)
+Gui.Form.GsGcLabor.Enabled(True)
+Gui.Form.GsGcLabor.Visible(True)
+Gui.Form.GsGcLabor.Zorder(0)
+Gui.Form.GsGcLabor.Size(516,494)
+Gui.Form.GsGcLabor.Position(69,40)
+Gui.Form.GsGcLabor.Parent("SplitContainer1",0)
+Gui.Form.txtTieRods.Create(TextBox,"",True,100,20,0,293,370,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtTieRods.Parent("SplitContainer1",1)
+Gui.Form.ddlAnchor.Create(DropDownList)
+Gui.Form.ddlAnchor.Enabled(True)
+Gui.Form.ddlAnchor.Visible(True)
+Gui.Form.ddlAnchor.Zorder(0)
+Gui.Form.ddlAnchor.Size(140,20)
+Gui.Form.ddlAnchor.Position(134,82)
+Gui.Form.ddlAnchor.FontName("Tahoma")
+Gui.Form.ddlAnchor.FontSize(8.25)
+Gui.Form.ddlAnchor.Anchor(7)
+Gui.Form.ddlAnchor.Parent("SplitContainer1",1)
+Gui.Form.ddlAnchor.DefaultValue("0")
+Gui.Form.ddlStemStover.Create(DropDownList)
+Gui.Form.ddlStemStover.Enabled(True)
+Gui.Form.ddlStemStover.Visible(True)
+Gui.Form.ddlStemStover.Zorder(0)
+Gui.Form.ddlStemStover.Size(106,20)
+Gui.Form.ddlStemStover.Position(579,487)
+Gui.Form.ddlStemStover.Anchor(7)
+Gui.Form.ddlStemStover.FontName("Tahoma")
+Gui.Form.ddlStemStover.FontSize(8.25)
+Gui.Form.ddlStemStover.Parent("SplitContainer1",1)
+Gui.Form.lbl49.Create(Label,"EXTREME BYPASS",True,85,13,0,485,348,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl49.BorderStyle(0)
+Gui.Form.lbl49.Anchor(7)
+Gui.Form.lbl49.Parent("SplitContainer1",1)
+Gui.Form.txtRodBearing.Create(TextBox,"",True,100,20,0,293,292,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtRodBearing.Parent("SplitContainer1",1)
+Gui.Form.ddlGlandODLeak.Create(DropDownList)
+Gui.Form.ddlGlandODLeak.Enabled(True)
+Gui.Form.ddlGlandODLeak.Visible(True)
+Gui.Form.ddlGlandODLeak.Zorder(0)
+Gui.Form.ddlGlandODLeak.Size(106,20)
+Gui.Form.ddlGlandODLeak.Position(578,318)
+Gui.Form.ddlGlandODLeak.Anchor(7)
+Gui.Form.ddlGlandODLeak.FontName("Tahoma")
+Gui.Form.ddlGlandODLeak.FontSize(8.25)
+Gui.Form.ddlGlandODLeak.Parent("SplitContainer1",1)
+Gui.Form.lbl45.Create(Label,"STEM STANDARD LOCKNUT -",True,139,13,0,430,520,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl45.BorderStyle(0)
+Gui.Form.lbl45.Anchor(7)
+Gui.Form.lbl45.Parent("SplitContainer1",1)
+Gui.Form.ddlStemStandard.Create(DropDownList)
+Gui.Form.ddlStemStandard.Enabled(True)
+Gui.Form.ddlStemStandard.Visible(True)
+Gui.Form.ddlStemStandard.Zorder(0)
+Gui.Form.ddlStemStandard.Size(106,20)
+Gui.Form.ddlStemStandard.Position(579,520)
+Gui.Form.ddlStemStandard.Anchor(7)
+Gui.Form.ddlStemStandard.FontName("Tahoma")
+Gui.Form.ddlStemStandard.FontSize(8.25)
+Gui.Form.ddlStemStandard.Parent("SplitContainer1",1)
+Gui.Form.ddlWeldingInc.Create(DropDownList)
+Gui.Form.ddlWeldingInc.Enabled(True)
+Gui.Form.ddlWeldingInc.Visible(True)
+Gui.Form.ddlWeldingInc.Zorder(0)
+Gui.Form.ddlWeldingInc.Size(106,20)
+Gui.Form.ddlWeldingInc.Position(578,450)
+Gui.Form.ddlWeldingInc.Anchor(7)
+Gui.Form.ddlWeldingInc.FontName("Tahoma")
+Gui.Form.ddlWeldingInc.FontSize(8.25)
+Gui.Form.ddlWeldingInc.Parent("SplitContainer1",1)
+Gui.Form.lbl43.Create(Label,"SUPERVISOR INIT",True,87,13,0,485,410,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl43.BorderStyle(0)
+Gui.Form.lbl43.Anchor(7)
+Gui.Form.lbl43.Parent("SplitContainer1",1)
+Gui.Form.lbl44.Create(Label,"STEM STOVER LOCKNUT",True,117,13,0,454,484,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl44.BorderStyle(0)
+Gui.Form.lbl44.Anchor(7)
+Gui.Form.lbl44.Parent("SplitContainer1",1)
+Gui.Form.lbl27.Create(Label,"LOCKNUT",True,46,13,0,83,269,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl27.BorderStyle(0)
+Gui.Form.lbl27.Anchor(7)
+Gui.Form.lbl27.Parent("SplitContainer1",1)
+Gui.Form.ddlNoBypass.Create(DropDownList)
+Gui.Form.ddlNoBypass.Enabled(True)
+Gui.Form.ddlNoBypass.Visible(True)
+Gui.Form.ddlNoBypass.Zorder(0)
+Gui.Form.ddlNoBypass.Size(106,20)
+Gui.Form.ddlNoBypass.Position(578,370)
+Gui.Form.ddlNoBypass.Anchor(7)
+Gui.Form.ddlNoBypass.FontName("Tahoma")
+Gui.Form.ddlNoBypass.FontSize(8.25)
+Gui.Form.ddlNoBypass.Parent("SplitContainer1",1)
+Gui.Form.ddlGlandBushing.Create(DropDownList)
+Gui.Form.ddlGlandBushing.Enabled(True)
+Gui.Form.ddlGlandBushing.Visible(True)
+Gui.Form.ddlGlandBushing.Zorder(0)
+Gui.Form.ddlGlandBushing.Size(106,20)
+Gui.Form.ddlGlandBushing.Position(137,318)
+Gui.Form.ddlGlandBushing.Anchor(7)
+Gui.Form.ddlGlandBushing.FontName("Tahoma")
+Gui.Form.ddlGlandBushing.FontSize(8.25)
+Gui.Form.ddlGlandBushing.Parent("SplitContainer1",1)
+Gui.Form.lbl46.Create(Label,"CB VALVES",True,52,13,0,77,480,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl46.BorderStyle(0)
+Gui.Form.lbl46.Anchor(7)
+Gui.Form.lbl46.Parent("SplitContainer1",1)
+Gui.Form.ddlCBValves.Create(DropDownList)
+Gui.Form.ddlCBValves.Enabled(True)
+Gui.Form.ddlCBValves.Visible(True)
+Gui.Form.ddlCBValves.Zorder(0)
+Gui.Form.ddlCBValves.Size(106,20)
+Gui.Form.ddlCBValves.Position(138,476)
+Gui.Form.ddlCBValves.Anchor(7)
+Gui.Form.ddlCBValves.FontName("Tahoma")
+Gui.Form.ddlCBValves.FontSize(8.25)
+Gui.Form.ddlCBValves.Parent("SplitContainer1",1)
+Gui.Form.lbl47.Create(Label,"MANIFOLD",True,52,13,0,76,505,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl47.BorderStyle(0)
+Gui.Form.lbl47.Anchor(7)
+Gui.Form.lbl47.Parent("SplitContainer1",1)
+Gui.Form.ddlManifold.Create(DropDownList)
+Gui.Form.ddlManifold.Enabled(True)
+Gui.Form.ddlManifold.Visible(True)
+Gui.Form.ddlManifold.Zorder(0)
+Gui.Form.ddlManifold.Size(106,20)
+Gui.Form.ddlManifold.Position(138,502)
+Gui.Form.ddlManifold.Anchor(7)
+Gui.Form.ddlManifold.FontName("Tahoma")
+Gui.Form.ddlManifold.FontSize(8.25)
+Gui.Form.ddlManifold.Parent("SplitContainer1",1)
+Gui.Form.txtAnchor.Create(TextBox,"",True,100,20,0,293,82,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAnchor.Parent("SplitContainer1",1)
+Gui.Form.lbl53.Create(Label,"COMMENTS",True,56,13,0,314,64,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl53.BorderStyle(0)
+Gui.Form.lbl53.Anchor(7)
+Gui.Form.lbl53.Parent("SplitContainer1",1)
+Gui.Form.txtAncorBushing.Create(TextBox,"",True,100,20,0,293,108,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAncorBushing.Parent("SplitContainer1",1)
+Gui.Form.lbl50.Create(Label,"NO BYPASS",True,55,13,0,515,374,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl50.BorderStyle(0)
+Gui.Form.lbl50.Anchor(7)
+Gui.Form.lbl50.Parent("SplitContainer1",1)
+Gui.Form.lbl38.Create(Label,"TIE RODS",True,47,13,0,86,374,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl38.BorderStyle(0)
+Gui.Form.lbl38.Anchor(7)
+Gui.Form.lbl38.Parent("SplitContainer1",1)
+Gui.Form.ddlGlandIDLeak.Create(DropDownList)
+Gui.Form.ddlGlandIDLeak.Enabled(True)
+Gui.Form.ddlGlandIDLeak.Visible(True)
+Gui.Form.ddlGlandIDLeak.Zorder(0)
+Gui.Form.ddlGlandIDLeak.Size(106,20)
+Gui.Form.ddlGlandIDLeak.Position(578,292)
+Gui.Form.ddlGlandIDLeak.Anchor(7)
+Gui.Form.ddlGlandIDLeak.FontName("Tahoma")
+Gui.Form.ddlGlandIDLeak.FontSize(8.25)
+Gui.Form.ddlGlandIDLeak.Parent("SplitContainer1",1)
+Gui.Form.ddlEndCap.Create(DropDownList)
+Gui.Form.ddlEndCap.Enabled(True)
+Gui.Form.ddlEndCap.Visible(True)
+Gui.Form.ddlEndCap.Zorder(0)
+Gui.Form.ddlEndCap.Size(140,20)
+Gui.Form.ddlEndCap.Position(578,223)
+Gui.Form.ddlEndCap.Anchor(7)
+Gui.Form.ddlEndCap.FontName("Tahoma")
+Gui.Form.ddlEndCap.FontSize(8.25)
+Gui.Form.ddlEndCap.Parent("SplitContainer1",1)
+Gui.Form.txtCoupling.Create(TextBox,"",True,100,20,0,293,198,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtCoupling.Parent("SplitContainer1",1)
+Gui.Form.lbl21.Create(Label,"ANCHOR",True,43,13,0,85,85,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl21.BorderStyle(0)
+Gui.Form.lbl21.Anchor(7)
+Gui.Form.lbl21.Parent("SplitContainer1",1)
+Gui.Form.txtPipingKit.Create(TextBox,"",True,100,20,0,293,224,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtPipingKit.Parent("SplitContainer1",1)
+Gui.Form.lbl26.Create(Label,"PIPING KIT",True,53,13,0,74,226,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl26.BorderStyle(0)
+Gui.Form.lbl26.Anchor(7)
+Gui.Form.lbl26.Parent("SplitContainer1",1)
+Gui.Form.lbl34.Create(Label,"END CAP",True,43,13,0,527,227,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl34.BorderStyle(0)
+Gui.Form.lbl34.Anchor(7)
+Gui.Form.lbl34.Parent("SplitContainer1",1)
+Gui.Form.ddlCoupling.Create(DropDownList)
+Gui.Form.ddlCoupling.Enabled(True)
+Gui.Form.ddlCoupling.Visible(True)
+Gui.Form.ddlCoupling.Zorder(0)
+Gui.Form.ddlCoupling.Size(106,20)
+Gui.Form.ddlCoupling.Position(136,198)
+Gui.Form.ddlCoupling.Anchor(7)
+Gui.Form.ddlCoupling.FontName("Tahoma")
+Gui.Form.ddlCoupling.FontSize(8.25)
+Gui.Form.ddlCoupling.Parent("SplitContainer1",1)
+Gui.Form.ddl1TieRods.Create(DropDownList)
+Gui.Form.ddl1TieRods.Enabled(True)
+Gui.Form.ddl1TieRods.Visible(True)
+Gui.Form.ddl1TieRods.Zorder(0)
+Gui.Form.ddl1TieRods.Size(106,20)
+Gui.Form.ddl1TieRods.Position(138,370)
+Gui.Form.ddl1TieRods.Anchor(7)
+Gui.Form.ddl1TieRods.FontName("Tahoma")
+Gui.Form.ddl1TieRods.FontSize(8.25)
+Gui.Form.ddl1TieRods.Parent("SplitContainer1",1)
+Gui.Form.txtLocknut.Create(TextBox,"",True,100,20,0,293,266,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtLocknut.Parent("SplitContainer1",1)
+Gui.Form.txtGlandIDLeak.Create(TextBox,"",True,100,20,0,740,292,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtGlandIDLeak.Parent("SplitContainer1",1)
+Gui.Form.txtStemStover.Create(TextBox,"",True,100,20,0,740,486,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtStemStover.Parent("SplitContainer1",1)
+Gui.Form.txtSeals.Create(TextBox,"",True,100,20,0,293,343,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtSeals.Parent("SplitContainer1",1)
+Gui.Form.txtNoBypass.Create(TextBox,"",True,100,20,0,740,370,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtNoBypass.Parent("SplitContainer1",1)
+Gui.Form.txtPhoto.Create(TextBox,"",True,100,20,0,293,539,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtPhoto.Parent("SplitContainer1",1)
+Gui.Form.txtStrokeRes.Create(TextBox,"",True,100,20,0,293,172,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtStrokeRes.Parent("SplitContainer1",1)
+Gui.Form.txtPiston.Create(TextBox,"",True,100,20,0,740,172,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtPiston.Parent("SplitContainer1",1)
+Gui.Form.ddlExtrBypass.Create(DropDownList)
+Gui.Form.ddlExtrBypass.Enabled(True)
+Gui.Form.ddlExtrBypass.Visible(True)
+Gui.Form.ddlExtrBypass.Zorder(0)
+Gui.Form.ddlExtrBypass.Size(106,20)
+Gui.Form.ddlExtrBypass.Position(578,344)
+Gui.Form.ddlExtrBypass.Anchor(7)
+Gui.Form.ddlExtrBypass.FontName("Tahoma")
+Gui.Form.ddlExtrBypass.FontSize(8.25)
+Gui.Form.ddlExtrBypass.Parent("SplitContainer1",1)
+Gui.Form.lbl55.Create(Label,"MATERIALS",True,84,17,0,114,20,True,0,"Tahoma",10.25,,0,0)
+Gui.Form.lbl55.BorderStyle(0)
+Gui.Form.lbl55.FontStyle(True,False,False,False,False)
+Gui.Form.lbl55.Parent("SplitContainer1",1)
+Gui.Form.lbl35.Create(Label,"ROD BEARING",True,69,13,0,62,296,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl35.BorderStyle(0)
+Gui.Form.lbl35.Anchor(7)
+Gui.Form.lbl35.Parent("SplitContainer1",1)
+Gui.Form.txtStem.Create(TextBox,"",True,100,20,0,293,449,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtStem.Parent("SplitContainer1",1)
+Gui.Form.txtCBValves.Create(TextBox,"",True,100,20,0,293,476,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtCBValves.Parent("SplitContainer1",1)
+Gui.Form.txtManifold.Create(TextBox,"",True,100,20,0,293,502,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtManifold.Parent("SplitContainer1",1)
+Gui.Form.lbl22.Create(Label,"ANCHOR BUSHING",True,90,13,0,38,111,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl22.BorderStyle(0)
+Gui.Form.lbl22.Anchor(7)
+Gui.Form.lbl22.Parent("SplitContainer1",1)
+Gui.Form.txtPhotoAttached.Create(TextBox,"",True,100,20,0,293,567,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtPhotoAttached.Parent("SplitContainer1",1)
+Gui.Form.lbl52.Create(Label,"THREADS DAMAGE",True,91,13,0,478,497,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl52.BorderStyle(0)
+Gui.Form.lbl52.Anchor(7)
+Gui.Form.lbl52.Parent("SplitContainer1",1)
+Gui.Form.lbl39.Create(Label,"BOLTS",True,31,13,0,101,400,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl39.BorderStyle(0)
+Gui.Form.lbl39.Anchor(7)
+Gui.Form.lbl39.Parent("SplitContainer1",1)
+Gui.Form.lbl25.Create(Label,"COUPLING",True,51,13,0,75,201,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl25.BorderStyle(0)
+Gui.Form.lbl25.Anchor(7)
+Gui.Form.lbl25.Parent("SplitContainer1",1)
+Gui.Form.txtStemBushing.Create(TextBox,"",True,100,20,0,740,108,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtStemBushing.Parent("SplitContainer1",1)
+Gui.Form.txtPackingGland.Create(TextBox,"",True,100,20,0,740,134,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtPackingGland.Parent("SplitContainer1",1)
+Gui.Form.txtEndCap.Create(TextBox,"",True,100,20,0,740,224,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtEndCap.Parent("SplitContainer1",1)
+Gui.Form.ddlSeals.Create(DropDownList)
+Gui.Form.ddlSeals.Enabled(True)
+Gui.Form.ddlSeals.Visible(True)
+Gui.Form.ddlSeals.Zorder(0)
+Gui.Form.ddlSeals.Size(106,20)
+Gui.Form.ddlSeals.Position(138,344)
+Gui.Form.ddlSeals.Anchor(7)
+Gui.Form.ddlSeals.FontName("Tahoma")
+Gui.Form.ddlSeals.FontSize(8.25)
+Gui.Form.ddlSeals.Parent("SplitContainer1",1)
+Gui.Form.ddlBarrel.Create(DropDownList)
+Gui.Form.ddlBarrel.Enabled(True)
+Gui.Form.ddlBarrel.Visible(True)
+Gui.Form.ddlBarrel.Zorder(0)
+Gui.Form.ddlBarrel.Size(140,20)
+Gui.Form.ddlBarrel.Position(134,134)
+Gui.Form.ddlBarrel.Anchor(7)
+Gui.Form.ddlBarrel.FontName("Tahoma")
+Gui.Form.ddlBarrel.FontSize(8.25)
+Gui.Form.ddlBarrel.Parent("SplitContainer1",1)
+Gui.Form.txtGlandODLeak.Create(TextBox,"",True,100,20,0,740,318,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtGlandODLeak.Parent("SplitContainer1",1)
+Gui.Form.lbl51.Create(Label,"REPLACE WITH STOVER",True,116,13,0,454,534,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl51.BorderStyle(0)
+Gui.Form.lbl51.Anchor(7)
+Gui.Form.lbl51.Parent("SplitContainer1",1)
+Gui.Form.ddlStemBushing.Create(DropDownList)
+Gui.Form.ddlStemBushing.Enabled(True)
+Gui.Form.ddlStemBushing.Visible(True)
+Gui.Form.ddlStemBushing.Zorder(0)
+Gui.Form.ddlStemBushing.Size(140,20)
+Gui.Form.ddlStemBushing.Position(578,108)
+Gui.Form.ddlStemBushing.Anchor(7)
+Gui.Form.ddlStemBushing.FontName("Tahoma")
+Gui.Form.ddlStemBushing.FontSize(8.25)
+Gui.Form.ddlStemBushing.Parent("SplitContainer1",1)
+Gui.Form.lbl40.Create(Label,"GLAND (ID) SEAL LEAK",True,109,13,0,462,296,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl40.BorderStyle(0)
+Gui.Form.lbl40.Anchor(7)
+Gui.Form.lbl40.Parent("SplitContainer1",1)
+Gui.Form.txtWeldingInc.Create(TextBox,"",True,100,20,0,740,449,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtWeldingInc.Parent("SplitContainer1",1)
+Gui.Form.ddlPackingGland.Create(DropDownList)
+Gui.Form.ddlPackingGland.Enabled(True)
+Gui.Form.ddlPackingGland.Visible(True)
+Gui.Form.ddlPackingGland.Zorder(0)
+Gui.Form.ddlPackingGland.Size(140,20)
+Gui.Form.ddlPackingGland.Position(578,133)
+Gui.Form.ddlPackingGland.Anchor(7)
+Gui.Form.ddlPackingGland.FontName("Tahoma")
+Gui.Form.ddlPackingGland.FontSize(8.25)
+Gui.Form.ddlPackingGland.Parent("SplitContainer1",1)
+Gui.Form.cmdSelectSerial.Create(Button)
+Gui.Form.cmdSelectSerial.Enabled(True)
+Gui.Form.cmdSelectSerial.Visible(False)
+Gui.Form.cmdSelectSerial.Zorder(0)
+Gui.Form.cmdSelectSerial.Size(91,23)
+Gui.Form.cmdSelectSerial.Position(1116,132)
+Gui.Form.cmdSelectSerial.Caption("Apply To Serial")
+Gui.Form.cmdSelectSerial.FontName("Tahoma")
+Gui.Form.cmdSelectSerial.FontSize(8.25)
+Gui.Form.cmdSelectSerial.Event(Click,cmdApplyToSerial_Click)
+Gui.Form.txtSerialNo.Create(TextboxM)
+Gui.Form.txtSerialNo.Enabled(True)
+Gui.Form.txtSerialNo.Visible(False)
+Gui.Form.txtSerialNo.Zorder(0)
+Gui.Form.txtSerialNo.Size(297,79)
+Gui.Form.txtSerialNo.Position(911,45)
+Gui.Form.txtSerialNo.FontName("Tahoma")
+Gui.Form.txtSerialNo.FontSize(8.25)
+Gui.Form.txtSerial.Create(TextBox,"",True,135,20,0,622,12,True,0,"Tahoma",8.25,,1)
+Gui.FormSerial..Create(BaseForm)
+Gui.FormSerial..Caption("Serial")
+Gui.FormSerial..Size(267,514)
+Gui.FormSerial..MinX(0)
+Gui.FormSerial..MinY(0)
+Gui.FormSerial..Position(0,0)
+Gui.FormSerial..AlwaysOnTop(False)
+Gui.FormSerial..FontName("Tahoma")
+Gui.FormSerial..FontSize(8.25)
+Gui.FormSerial..ControlBox(True)
+Gui.FormSerial..MaxButton(True)
+Gui.FormSerial..MinButton(True)
+Gui.FormSerial..MousePointer(0)
+Gui.FormSerial..Moveable(True)
+Gui.FormSerial..Sizeable(True)
+Gui.FormSerial..ShowInTaskBar(True)
+Gui.FormSerial..TitleBar(True)
+Gui.FormSerial..Event(UnLoad,FormSerial_UnLoad)
+Gui.FormSerial.GsgcSerial.Create(GsGridControl)
+Gui.FormSerial.GsgcSerial.Enabled(True)
+Gui.FormSerial.GsgcSerial.Visible(True)
+Gui.FormSerial.GsgcSerial.Zorder(0)
+Gui.FormSerial.GsgcSerial.Size(253,390)
+Gui.FormSerial.GsgcSerial.Position(7,41)
+Gui.FormSerial.chkSelectAll.Create(CheckBox)
+Gui.FormSerial.chkSelectAll.Enabled(True)
+Gui.FormSerial.chkSelectAll.Visible(True)
+Gui.FormSerial.chkSelectAll.Zorder(0)
+Gui.FormSerial.chkSelectAll.Size(127,20)
+Gui.FormSerial.chkSelectAll.Position(11,17)
+Gui.FormSerial.chkSelectAll.Caption("Select/Deselect All")
+Gui.FormSerial.chkSelectAll.FontName("Tahoma")
+Gui.FormSerial.chkSelectAll.FontSize(8.25)
+Gui.FormSerial.chkSelectAll.Event(Change,chkSelectAll_Change)
+Gui.FormSerial.cmdApply.Create(Button)
+Gui.FormSerial.cmdApply.Enabled(True)
+Gui.FormSerial.cmdApply.Visible(True)
+Gui.FormSerial.cmdApply.Zorder(0)
+Gui.FormSerial.cmdApply.Size(75,23)
+Gui.FormSerial.cmdApply.Position(18,445)
+Gui.FormSerial.cmdApply.Caption("Apply")
+Gui.FormSerial.cmdApply.FontName("Tahoma")
+Gui.FormSerial.cmdApply.FontSize(8.25)
+Gui.FormSerial.cmdApply.Event(Click,cmdApply_Click)
+Gui.FormSerial.cmdCancel.Create(Button)
+Gui.FormSerial.cmdCancel.Enabled(True)
+Gui.FormSerial.cmdCancel.Visible(True)
+Gui.FormSerial.cmdCancel.Zorder(0)
+Gui.FormSerial.cmdCancel.Size(75,23)
+Gui.FormSerial.cmdCancel.Position(112,445)
+Gui.FormSerial.cmdCancel.Caption("Cancel")
+Gui.FormSerial.cmdCancel.FontName("Tahoma")
+Gui.FormSerial.cmdCancel.FontSize(8.25)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global.sJob.Declare(String)
+v.Global.sSuffix.Declare(String)
+v.Global.sEMPID.Declare(String)
+v.Global.sEMPName.Declare(String)
+
+Program.Sub.Preflight.End
+
+'ARC#6604
+'Customer: LHD Equipment
+' hook# 15840
+'	Jan 2021, Nam Le
+
+
+'LHD Equipment is looking for a way to input their inspection breakdown reports for repair work orders.
+'This data is ultimately used for generating a quote to the customer and determining the labor and
+'materials needed for the repair. This needs to be an input screen run asynchronously from the GUI
+'and will include a new menu item to export the data by work order to an excel spreadsheet. This script
+'will need to function on both the old GUI and the new SFDC.
+
+'This script check if the WO is a repair WO (Start with R)
+'Then get the related info and display on a custom screen
+'Allow user to edit/enter info
+'Lastly, save the info into custom tables, which later used to print to Excel as report
+
+Program.Sub.Main.Start
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sSeq.Declare(String)
+	v.Local.sRet.Declare(String)
+	v.Local.sMsg.Declare(String)
+	v.Local.sOperation.Declare(String)
+	v.Local.iCounter.Declare(Long)
+	v.Local.sMatPart.Declare(String)
+	v.Local.sTemp.Declare(String)
+	v.Local.sIN1.Declare(String)
+	v.Local.sIN2.Declare(String)
+	v.Local.sEmpIN.Declare(String)
+	v.Local.sEMPID.Declare(String)
+	v.Local.sEMPName.Declare(String)
+	
+	v.Global.sJob.Set("")
+	v.Global.sSuffix.Set("")
+	
+	v.Global.sJob.Set(v.Passed.009990)
+	v.Global.sSuffix.Set(v.Passed.009991)
+	v.Global.sEMPID.Set(v.Passed.009993)
+	v.Global.sEMPName.Set(v.Passed.009994)
+	
+	f.Intrinsic.Control.If(v.Global.sJob,=,"")
+		f.Intrinsic.Control.CallSub(Unload)
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.String.Left(v.Global.sJob,1,v.Local.sTemp)
+	f.Intrinsic.Control.If(v.Local.sTemp,!=,"R")
+		f.Intrinsic.Control.CallSub(Unload)
+	f.Intrinsic.Control.EndIf
+	
+'	v.Global.sJob.Set("000460")
+'	v.Global.sSuffix.Set("001")
+	
+	f.ODBC.Connection!Con.OpenCompanyConnection
+	
+	'1 Select Labor Info
+	'==================================================
+	
+	f.Intrinsic.String.Build("select RTRIM(JOB) JOB, RTRIM(SUFFIX) SUFFIX, RTRIM(SEQ) SEQ, RTRIM(OPERATION) OPERATION, RTRIM(EMPID) EMPID, TIME from GCG_6604_LABOR where RTRIM(JOB)='{0}' and RTRIM(SUFFIX)='{1}'", v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+	f.Intrinsic.Control.If(v.DataTable.dtLabor.Exists)
+		f.Data.Datatable.Close("dtLabor")
+	f.Intrinsic.Control.EndIf
+	f.Data.Datatable.CreateFromSQL("dtLabor", "Con", v.Local.sSQL, True)
+	
+	'not found, create new records
+	f.Intrinsic.Control.If(v.DataTable.dtLabor.RowCount,=,0)
+		f.Intrinsic.String.Build("select RTRIM(J.CUSTOMER), RTRIM(J.PART), RTRIM(J.DESCRIPTION),  C.NAME_CUSTOMER from V_JOB_HEADER J left join V_CUSTOMER_MASTER C on RTRIM(C.CUSTOMER) = RTRIM(J.CUSTOMER) where RTRIM(JOB)='{0}' and RTRIM(SUFFIX)='{1}'", v.Global.sJob.Trim, v.Global.sSuffix.Trim, v.Local.sSQL)
+		v.Local.sRet.Set("")
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRet)
+		
+		'insert Header
+		f.Intrinsic.Control.If(v.Local.sRet,=,"")
+			f.Intrinsic.String.Build("Cannot find data for WO#{0}-{1}", v.Global.sJob, v.Global.sSuffix, v.Local.sMsg)
+			f.Intrinsic.UI.Msgbox(v.Local.sMsg)
+			f.Intrinsic.Control.CallSub(Unload)
+		f.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.String.Split(v.Local.sRet, "*!*", v.Local.sRet)
+		f.Intrinsic.String.Build("insert into GCG_6604_WOHDR (JOB, SUFFIX, CUSTID, PART, RPDATE, EMPID) values('{0}','{1}','{2}','{3}','{4}','{5}')", v.Global.sJob, v.Global.sSuffix, v.Local.sRet(0), v.Local.sRet(1), v.Ambient.Date.FormatYYYY-MM-DD, v.Global.sEMPID, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'------------------------
+		'insert Labor Seq
+		#Region "INSERT LABOR"
+		v.Local.sOperation.Set("Dismantle, Inspect")
+		v.Local.sSeq.Set("000100")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Reassemble / Test")
+		v.Local.sSeq.Set("000200")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Pull Parts and Seals")
+		v.Local.sSeq.Set("000300")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Paint")
+		v.Local.sSeq.Set("000400")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Gland Repair/Convert Replace Per Sample")
+		v.Local.sSeq.Set("000500")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Piston Repair/Convert/Replace Per Sample")
+		v.Local.sSeq.Set("000600")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Locknut Repairs/Replace Per Sample")
+		v.Local.sSeq.Set("000700")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("End Cap Repairs/Replace Per Sample")
+		v.Local.sSeq.Set("000800")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Gland Bushings Repairs/Replace Per Sample")
+		v.Local.sSeq.Set("000900")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Remove and Reinstall Anchor Bushing P/N:")
+		v.Local.sSeq.Set("001000")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Buff/Bore & Sleeve Anchor")
+		v.Local.sSeq.Set("001100")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Weld Prep/Chase threads on Barrel")
+		v.Local.sSeq.Set("001200")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Grind off Shield and Salvage")
+		v.Local.sSeq.Set("001300")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Saw/Part Off Anchor Lug/Cutoff CPLG/Pipe Kit")
+		v.Local.sSeq.Set("001400")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Retap CPLGs/Pipekit")
+		v.Local.sSeq.Set("001500")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Repair/Manufacture New Anchor Bushing")
+		v.Local.sSeq.Set("001600")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Weld Threads on Barrel")
+		v.Local.sSeq.Set("001700")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Turn New Threads and Bore")
+		v.Local.sSeq.Set("001800")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Reweld CPLGS P/N:       Pipe Kit P/N:")
+		v.Local.sSeq.Set("001900")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Weld New/Salvage Anchor to new/Salvage Barrel")
+		v.Local.sSeq.Set("002000")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Miscellaneous")
+		v.Local.sSeq.Set("002100")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Hone Barrel to:        Flap Dents")
+		v.Local.sSeq.Set("002200")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("MFG New Barrel/MFG New Anchor as Per Sample")
+		v.Local.sSeq.Set("002300")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Remove and Reinstall Stem Eye Bushing P/N:")
+		v.Local.sSeq.Set("002400")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Turn Off Stover/Weld Prep Threads")
+		v.Local.sSeq.Set("002500")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Cut off Stem Eye:          Bevel:")
+		v.Local.sSeq.Set("002600")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Spot Weld, Grid&Polish Stem")
+		v.Local.sSeq.Set("002700")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Weld Threads on Stem")
+		v.Local.sSeq.Set("002800")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Chase/Turn New Threads on Stem")
+		v.Local.sSeq.Set("002900")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Buff/Bore/Sleeve Stem Eye")
+		v.Local.sSeq.Set("003000")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("MFG New Stem As Per Sample")
+		v.Local.sSeq.Set("003100")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("MFG New Stem Eye As Per Sample")
+		v.Local.sSeq.Set("003200")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("MFG New Stem Eye Bushing As Per Sample")
+		v.Local.sSeq.Set("003300")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Weld new / Salvage Stem to New / Salvage Stem Eye")
+		v.Local.sSeq.Set("003400")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		v.Local.sOperation.Set("Saw Cut Parts")
+		v.Local.sSeq.Set("003500")
+		f.Intrinsic.String.Build("insert into GCG_6604_LABOR (JOB, SUFFIX, SEQ, OPERATION) values('{0}','{1}','{2}','{3}')", v.Global.sJob, v.Global.sSuffix, v.Local.sSeq, v.Local.sOperation.PSQLFriendly, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		#End Region
+		
+		'------------------------
+		'reselect
+		f.Intrinsic.String.Build("select RTRIM(JOB) JOB, RTRIM(SUFFIX) SUFFIX, RTRIM(SEQ) SEQ, RTRIM(OPERATION) OPERATION, RTRIM(EMPID) EMPID, TIME from GCG_6604_LABOR where RTRIM(JOB)='{0}' and RTRIM(SUFFIX)='{1}'", v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.Intrinsic.Control.If(v.DataTable.dtLabor.Exists)
+			f.Data.Datatable.Close("dtLabor")
+		f.Intrinsic.Control.EndIf
+		f.Data.Datatable.CreateFromSQL("dtLabor", "Con", v.Local.sSQL, True)
+	
+	f.Intrinsic.Control.EndIf
+	
+	'Add to Grid and Format
+	f.Intrinsic.Control.CallSub(FormatGridLabor)
+	'==================================================
+	
+
+
+	
+	
+	'2 Select Materials Info
+	'==================================================
+		'Add option for Materials
+	#Region "Add options"
+	'Anchor
+	gui.Form.ddlAnchor.AddItem("OK", 0)
+	gui.Form.ddlAnchor.AddItem("REPAIRABLE", 1)
+	gui.Form.ddlAnchor.AddItem("SCRAPPED BEYOND REPAIR", 2)
+	gui.Form.ddlAnchor.AddItem("WORN OUT", 3)
+	gui.Form.ddlAnchor.AddItem("BLOWN OFF/MISSING", 4)
+	gui.Form.ddlAnchor.AddItem("CRACKED", 5)
+	gui.Form.ddlAnchor.AddItem("BORE & SLEEVE", 6)
+	gui.Form.ddlAnchor.AddItem("BORE N/S", 7)
+	gui.Form.ddlAnchor.AddItem("BOREE/W", 8)
+	
+	'Anchor Bushing
+	gui.Form.ddlAnchorBushing.AddItem("OK", 0)	
+	gui.Form.ddlAnchorBushing.AddItem("REPAIRABLE", 1)	
+	gui.Form.ddlAnchorBushing.AddItem("SCRAPPED BEYOND REPAIR", 2)	
+	gui.Form.ddlAnchorBushing.AddItem("WORN OUT", 3)	
+	gui.Form.ddlAnchorBushing.AddItem("MISSING", 4)	
+	gui.Form.ddlAnchorBushing.AddItem("BORE N/S", 5)	
+	gui.Form.ddlAnchorBushing.AddItem("BORE E/W", 6)
+	
+	'Barrel
+	gui.Form.ddlBarrel.AddItem("OK", 0)
+	gui.Form.ddlBarrel.AddItem("REPAIRABLE", 1)
+	gui.Form.ddlBarrel.AddItem("SCRAPPED BEYOND REPAIR", 2)
+	gui.Form.ddlBarrel.AddItem("RUSTED", 3)
+	gui.Form.ddlBarrel.AddItem("SCORED", 4)
+	gui.Form.ddlBarrel.AddItem("DENTED", 5)
+	gui.Form.ddlBarrel.AddItem("GOUGED", 6)
+	gui.Form.ddlBarrel.AddItem("THREADS DAMAGED/PULLED", 7)
+	gui.Form.ddlBarrel.AddItem("BORE N/S", 8)
+	gui.Form.ddlBarrel.AddItem("BORE E/W", 9)
+	gui.Form.ddlBarrel.AddItem("MOUTH N/W", 10)
+	gui.Form.ddlBarrel.AddItem("MOUTH E/W", 11)
+	
+	'Stem Eye
+	gui.Form.ddlStemEye.AddItem("OK", 0)
+	gui.Form.ddlStemEye.AddItem("REPAIRABLE", 1)
+	gui.Form.ddlStemEye.AddItem("SCRAPPED BEYOND REPAIR", 2)
+	gui.Form.ddlStemEye.AddItem("WORN OUT", 3)
+	gui.Form.ddlStemEye.AddItem("BLOWN OFF/MISSING", 4)
+	gui.Form.ddlStemEye.AddItem("CRACKED", 5)
+	gui.Form.ddlStemEye.AddItem("BORE & SLEEVE", 6)
+	gui.Form.ddlStemEye.AddItem("BORE N/S", 7)
+	gui.Form.ddlStemEye.AddItem("BOREE/W", 8)
+	
+	'Stem eye bushing
+	gui.Form.ddlStemBushing.AddItem("OK", 0)	
+	gui.Form.ddlStemBushing.AddItem("REPAIRABLE", 1)	
+	gui.Form.ddlStemBushing.AddItem("SCRAPPED BEYOND REPAIR", 2)	
+	gui.Form.ddlStemBushing.AddItem("WORN OUT", 3)	
+	gui.Form.ddlStemBushing.AddItem("MISSING", 4)	
+	gui.Form.ddlStemBushing.AddItem("BORE N/S", 5)	
+	gui.Form.ddlStemBushing.AddItem("BORE E/W", 6)
+	
+	'packing gland
+	gui.Form.ddlPackingGland.AddItem("OK", 0)
+	gui.Form.ddlPackingGland.AddItem("REPAIRABLE", 1)
+	gui.Form.ddlPackingGland.AddItem("SCRAPPED BEYOND REPAIR", 2)
+	gui.Form.ddlPackingGland.AddItem("GOUGED", 3)
+	gui.Form.ddlPackingGland.AddItem("WORN OUT", 4)
+	gui.Form.ddlPackingGland.AddItem("CRACKED", 5)
+	gui.Form.ddlPackingGland.AddItem("THREADS DAMAGED/PULLED", 6)
+	gui.Form.ddlPackingGland.AddItem("BORE N/S", 7)
+	gui.Form.ddlPackingGland.AddItem("BORE E/W", 8)
+	
+	'stoke res
+	gui.Form.ddlStrokeRes.AddItem("OK",0)
+	gui.Form.ddlStrokeRes.AddItem("SCRAPPED",1)
+	
+	'coupling
+	gui.Form.ddlCoupling.AddItem("OK",0)
+	gui.Form.ddlCoupling.AddItem("SCRAPPED",1)
+	
+	'Piping Kit
+	gui.Form.ddlPipingKit.AddItem("OK",0)
+	gui.Form.ddlPipingKit.AddItem("REPAIRABLE",1)
+	gui.Form.ddlPipingKit.AddItem("SCRAPPED BEYOND REPAIR",2)
+	gui.Form.ddlPipingKit.AddItem("DAMAGED",3)
+	gui.Form.ddlPipingKit.AddItem("MISSING",4)
+	gui.Form.ddlPipingKit.AddItem("CRUSHED",5)
+	gui.Form.ddlPipingKit.AddItem("SHIELD",6)
+	
+	'Piston
+	gui.Form.ddlPiston.AddItem("OK", 0)
+	gui.Form.ddlPiston.AddItem("REPAIRABLE", 1)
+	gui.Form.ddlPiston.AddItem("SCRAPPED BEYOND REPAIR", 2)
+	gui.Form.ddlPiston.AddItem("GOUGED", 3)
+	gui.Form.ddlPiston.AddItem("BROKEN", 4)
+	
+	'End Cap
+	gui.Form.ddlEndCap.AddItem("OK", 0)
+	gui.Form.ddlEndCap.AddItem("REPAIRABLE", 1)
+	gui.Form.ddlEndCap.AddItem("SCRAPPED BEYOND REPAIR", 2)
+	gui.Form.ddlEndCap.AddItem("BENT", 3)
+	gui.Form.ddlEndCap.AddItem("GOUGED", 4)
+	
+	'Locknut
+	gui.Form.ddlLocknut.AddItem("OK", 0)
+	gui.Form.ddlLocknut.AddItem("REPAIRABLE", 1)
+	gui.Form.ddlLocknut.AddItem("SCRAPPED BEYOND REPAIR", 2)
+	gui.Form.ddlLocknut.AddItem("BLOWN OUT/MISSING", 3)
+	gui.Form.ddlLocknut.AddItem("DISTORTED", 4)
+	gui.Form.ddlLocknut.AddItem("SPLIT", 5)
+	gui.Form.ddlLocknut.AddItem("WORN OUT", 6)
+	gui.Form.ddlLocknut.AddItem("THREADS PULLED", 7)
+	gui.Form.ddlLocknut.AddItem("SIZED - CUT OFF", 8)
+	gui.Form.ddlLocknut.AddItem("WELDED - CUT OFF", 9)
+	
+	'ROD bearing
+	gui.Form.ddlRodBearing.AddItem("OK", 0)
+	gui.Form.ddlRodBearing.AddItem("SCRAPPED", 1)
+	
+	'Gland Bushing
+	gui.Form.ddlGlandBushing.AddItem("OK", 0)
+	gui.Form.ddlGlandBushing.AddItem("SCRAPPED", 1)
+	
+	'Seals
+	gui.Form.ddlSeals.AddItem("OK", 0)
+	gui.Form.ddlSeals.AddItem("SCRAPPED", 1)
+	
+	'tie rods
+	gui.Form.ddl1TieRods.AddItem("OK", 0)
+	gui.Form.ddl1TieRods.AddItem("SCRAPPED", 1)
+	
+	'bolts
+	gui.Form.ddl1Bolts.AddItem("OK", 0)
+	gui.Form.ddl1Bolts.AddItem("SCRAPPED", 1)
+	
+	'Gland ID
+	gui.Form.ddlGlandIDLeak.AddItem("OK", 0)
+	gui.Form.ddlGlandIDLeak.AddItem("LEAKED", 1)
+	
+	'gland OD
+	gui.Form.ddlGlandODLeak.AddItem("OK", 0)
+	gui.Form.ddlGlandODLeak.AddItem("LEAKED", 1)
+	
+	'extrem bp
+	gui.Form.ddlExtrBypass.AddItem("OK", 0)
+	gui.Form.ddlExtrBypass.AddItem("EXTREME BYPASS", 1)
+	
+	'no bp
+	gui.Form.ddlNoBypass.AddItem("OK", 0)
+	gui.Form.ddlNoBypass.AddItem("NO BYPASS", 1)
+	
+	'Stem
+	gui.Form.ddlStem.AddItem("OK", 0)
+	gui.Form.ddlStem.AddItem("REPAIRABLE", 1)
+	gui.Form.ddlStem.AddItem("SCRAPPED BEYOND REPAIR", 2)
+	gui.Form.ddlStem.AddItem("SCORED", 3)
+	gui.Form.ddlStem.AddItem("BENT/RUST", 4)
+	gui.Form.ddlStem.AddItem("BROKEN", 5)
+	gui.Form.ddlStem.AddItem("GOUGED/PITTED", 6)
+	gui.Form.ddlStem.AddItem("THEADS DAMAGED/PULLED", 7)
+	gui.Form.ddlStem.AddItem("RECHROME SIZE", 8)
+	
+	'WELDING
+	gui.Form.ddlWeldingInc.AddItem("OK", 0)
+	gui.Form.ddlWeldingInc.AddItem("WELDING INCORRECT", 1)
+	
+	'stem stover
+	gui.Form.ddlStemStover.AddItem("OK", 0)
+	gui.Form.ddlStemStover.AddItem("DAMAGED", 1)
+	
+	'Stem Standard
+	gui.Form.ddlStemStandard.AddItem("OK", 0)
+	gui.Form.ddlStemStandard.AddItem("REPLACE WITH STOVER")
+	
+	'CB Valves
+	gui.Form.ddlCBValves.AddItem("OK", 0)
+	gui.Form.ddlCBValves.AddItem("SCRAP", 1)
+	gui.Form.ddlCBValves.AddItem("REBUILD", 2)
+	gui.Form.ddlCBValves.AddItem("MISSING", 3)
+	
+	'Manifold
+	gui.Form.ddlManifold.AddItem("OK", 0)
+	gui.Form.ddlManifold.AddItem("SCRAP", 1)
+	gui.Form.ddlManifold.AddItem("REBUILD", 2)
+	
+	'photo
+	gui.Form.ddlPhoto.AddItem("OK", 0)
+	gui.Form.ddlPhoto.AddItem("INCOMING DIGITAL REQD SAVED TO FILE", 0)
+	
+	'photo attached
+	gui.Form.ddlPhotoAttached.AddItem("OK", 0)
+	gui.Form.ddlPhotoAttached.AddItem("PHOTO ATTACHED", 0)
+	
+	#End Region
+	
+		'set default dropdown values to OK
+#Region "Set Default to OK"
+	gui.Form.ddlAnchor.Text("OK")
+	gui.Form.ddlAnchorBushing.Text("OK")
+	gui.Form.ddlBarrel.Text("OK")
+	gui.Form.ddlStrokeRes.Text("OK")
+	gui.Form.ddlCoupling.Text("OK")
+	gui.Form.ddlPipingKit.Text("OK")
+	gui.Form.ddlLocknut.Text("OK")
+	gui.Form.ddlStem.Text("OK")
+	gui.Form.ddlPhoto.Text("OK")
+	gui.Form.ddlStemEye.Text("OK")
+	gui.Form.ddlStemBushing.Text("OK")
+	gui.Form.ddlPackingGland.Text("OK")
+	gui.Form.ddlPiston.Text("OK")
+	gui.Form.ddlEndCap.Text("OK")
+	gui.Form.ddlRodBearing.Text("OK")
+	gui.Form.ddlGlandBushing.Text("OK")
+	gui.Form.ddlSeals.Text("OK")
+	gui.Form.ddl1TieRods.Text("OK")
+	gui.Form.ddl1Bolts.Text("OK")
+	gui.Form.ddlGlandIDLeak.Text("OK")
+	gui.Form.ddlGlandODLeak.Text("OK")
+	gui.Form.ddlExtrBypass.Text("OK")
+	gui.Form.ddlNoBypass.Text("OK")
+	gui.Form.ddlWeldingInc.Text("OK")
+	gui.Form.ddlStemStandard.Text("OK")
+	gui.Form.ddlStemStover.Text("OK")
+	gui.Form.ddlCBValves.Text("OK")
+	gui.Form.ddlManifold.Text("OK")
+	gui.Form.ddlPhotoAttached.Text("OK")
+
+#End Region ' Set Default to OK
+
+	'Get Materials data
+	'if not exist => insert new 
+	'if exist => set values to dropdowns
+	f.Intrinsic.String.Build("select RTRIM(PART) PART, RTRIM(STATUS) STATUS, RTRIM(COMMENT) COMMENT from GCG_6604_MTRL where RTRIM(JOB)='{0}' and RTRIM(SUFFIX)='{1}'", v.Global.sJob.Trim, v.Global.sSuffix.Trim, v.Local.sSQL)
+	f.Intrinsic.Control.If(v.DataTable.dtMaterials.Exists)
+		f.Data.Datatable.Close("dtMaterials")
+	f.Intrinsic.Control.EndIf
+	f.Data.Datatable.CreateFromSQL("dtMaterials", "Con", v.Local.sSQL, True)
+	
+	f.Intrinsic.Control.If(v.DataTable.dtMaterials.RowCount,=,0)
+		#Region "Insert new Materials"
+		'Anchor
+		v.Local.sMatPart.Set("ANCHOR")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Anchor bushing
+		v.Local.sMatPart.Set("ANCHOR BUSHING")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Barrel
+		v.Local.sMatPart.Set("BARREL")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Stroke Res
+		v.Local.sMatPart.Set("STROKE RESTRICTOR")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Coupling
+		v.Local.sMatPart.Set("COUPLING")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Pipe
+		v.Local.sMatPart.Set("PIPING KIT")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Locknut
+		v.Local.sMatPart.Set("LOCKNUT")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Rod B
+		v.Local.sMatPart.Set("ROD BEARING")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Gland Bushing
+		v.Local.sMatPart.Set("GLAND BUSHING")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Seals
+		v.Local.sMatPart.Set("SEALS")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Tie Rods
+		v.Local.sMatPart.Set("TIE RODS")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Bolts
+		v.Local.sMatPart.Set("BOLTS")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Stem
+		v.Local.sMatPart.Set("STEM")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'CB VALVES
+		v.Local.sMatPart.Set("CB VALVES")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'MANIFOLD
+		v.Local.sMatPart.Set("MANIFOLD")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'PHOTO
+		v.Local.sMatPart.Set("PHOTO")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'PHOTO ATTACHED
+		v.Local.sMatPart.Set("PHOTO ATTACHED")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Stem eye
+		v.Local.sMatPart.Set("STEM EYE")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Eye Bushing
+		v.Local.sMatPart.Set("STEM EYE BUSHING")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Packing gland
+		v.Local.sMatPart.Set("PACKING GLAND")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Piston
+		v.Local.sMatPart.Set("PISTON")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'End cap
+		v.Local.sMatPart.Set("END CAP")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Glnd ID
+		v.Local.sMatPart.Set("GLAND (ID) SEAL LEAK")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Gland OD
+		v.Local.sMatPart.Set("GLAND (OD) SEAL LEAK")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Ext
+		v.Local.sMatPart.Set("EXTREME BYPASS")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'no BP
+		v.Local.sMatPart.Set("NO BYPASS")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'SUP
+		v.Local.sMatPart.Set("SUPERVISOR")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,COMMENT) values('{0}','{1}','{2}','')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Welding
+		v.Local.sMatPart.Set("WELDING INCORRECT")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'STEM STOVER
+		v.Local.sMatPart.Set("STEM STOVER LOCKNUT THREADS DAMAGE")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		'Stem standard
+		v.Local.sMatPart.Set("STEM STANDARD LOCKNUT - REPLACE WITH STOVER")
+		f.Intrinsic.String.Build("insert into GCG_6604_MTRL (JOB,SUFFIX,PART,STATUS) values('{0}','{1}','{2}','OK')", v.Global.sJob, v.Global.sSuffix, v.Local.sMatPart, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+		
+		#End Region ' Insert new Materials
+		
+	f.Intrinsic.Control.Else
+		f.Intrinsic.Control.For(v.Local.iCounter,0, v.DataTable.dtMaterials.RowCount--,1)
+		
+		#region "Select case for Material Part"
+		
+			f.Intrinsic.Control.SelectCase(v.DataTable.dtMaterials(v.Local.iCounter).PART!FieldValTrim)
+				f.Intrinsic.Control.Case("ANCHOR")
+					gui.Form.ddlAnchor.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtAnchor.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("ANCHOR BUSHING")
+					gui.Form.ddlAnchorBushing.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtAncorBushing.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("BARREL")
+					gui.Form.ddlBarrel.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtBarrel.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("STROKE RESTRICTOR")
+					gui.Form.ddlStrokeRes.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtStrokeRes.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("COUPLING")
+					gui.Form.ddlCoupling.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtCoupling.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("PIPING KIT")
+					gui.Form.ddlPipingKit.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtPipingKit.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("LOCKNUT")
+					gui.Form.ddlLocknut.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtLocknut.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("ROD BEARING")
+					gui.Form.ddlRodBearing.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtRodBearing.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("GLAND BUSHING")
+					gui.Form.ddlGlandBushing.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtGlandBushing.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("SEALS")
+					gui.Form.ddlSeals.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtSeals.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("TIE RODS")
+					gui.Form.ddl1TieRods.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtTieRods.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("BOLTS")
+					gui.Form.ddl1Bolts.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtBolts.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("STEM")
+					gui.Form.ddlStem.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtStem.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("CB VALVES")
+					gui.Form.ddlCBValves.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtCBValves.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("MANIFOLD")
+					gui.Form.ddlManifold.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtManifold.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("PHOTO")
+					gui.Form.ddlPhoto.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtPhoto.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("PHOTO ATTACHED")
+					gui.Form.ddlPhotoAttached.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtPhotoAttached.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("STEM EYE")
+					gui.Form.ddlStemEye.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtStemEye.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("STEM EYE BUSHING")
+					gui.Form.ddlStemBushing.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtStemBushing.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("PACKING GLAND")
+					gui.Form.ddlPackingGland.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtPackingGland.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("PISTON")
+					gui.Form.ddlPiston.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtPiston.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("END CAP")
+					gui.Form.ddlEndCap.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtEndCap.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("GLAND (ID) SEAL LEAK")
+					gui.Form.ddlGlandIDLeak.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtGlandIDLeak.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("GLAND (OD) SEAL LEAK")
+					gui.Form.ddlGlandODLeak.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtGlandODLeak.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("EXTREME BYPASS")
+					gui.Form.ddlExtrBypass.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtExtrBypass.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("NO BYPASS")
+					gui.Form.ddlNoBypass.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtNoBypass.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("WELDING INCORRECT")
+					gui.Form.ddlWeldingInc.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtWeldingInc.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("STEM STOVER LOCKNUT THREADS DAMAGE")
+					gui.Form.ddlStemStover.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtStemStover.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.Case("STEM STANDARD LOCKNUT - REPLACE WITH STOVER")
+					gui.Form.ddlStemStandard.Text(v.DataTable.dtMaterials(v.Local.iCounter).STATUS!FieldValTrim)
+					gui.Form.txtStemStandard.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+				f.Intrinsic.Control.CaseElse
+					'SUPERVSR
+					gui.Form.txtSupervisor.Text(v.DataTable.dtMaterials(v.Local.iCounter).COMMENT!FieldValTrim)
+			f.Intrinsic.Control.EndSelect
+			
+			#end region
+		
+		f.Intrinsic.Control.Next(v.Local.iCounter)
+	f.Intrinsic.Control.EndIf
+
+	'==================================================
+
+
+
+
+
+	'select headers
+	'==================================================
+	f.Intrinsic.String.Build("select RTRIM(H.EMPID) EMPID, RTRIM(H.PART) PART, H.RPDATE, RTRIM(H.PREV) PREV, RTRIM(H.TR) TR, RTRIM(H.RET) RET, RTRIM(H.EXT) EXT, RTRIM(C.NAME_CUSTOMER) CUSTOMER, RTRIM(J.DESCRIPTION) DESCRIPTION, RTRIM(SERIAL_NO) SERIAL from GCG_6604_WOHDR H left join V_CUSTOMER_MASTER C on RTRIM(C.CUSTOMER) = RTRIM(H.CUSTID) left join V_JOB_HEADER J on RTRIM(J.JOB) = RTRIM(H.JOB) and RTRIM(J.SUFFIX) = RTRIM(H.SUFFIX) where RTRIM(H.JOB)='{0}' and RTRIM(H.SUFFIX)='{1}'", v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+	v.Local.sRet.Set("")
+	f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRet)
+	
+	f.Intrinsic.Control.If(v.Local.sRet,!=,"")
+		f.Intrinsic.String.Split(v.Local.sRet,"*!*", v.Local.sRet)
+		f.Intrinsic.String.Build("{0}-{1}", v.Global.sJob, v.Global.sSuffix, v.Local.sTemp)
+		gui.Form.lblJobSuffix.Caption(v.Local.sTemp)
+		v.Local.sEMPID.Set(v.Local.sRet(0))
+		gui.Form.lblEMPID.Caption(v.Local.sEMPID)
+		gui.Form.lblPart.Caption(v.Local.sRet(1))
+		f.Intrinsic.String.Format(v.Local.sRet(2), "MM/DD/YYYY", v.Local.sTemp)
+		gui.Form.lblDate.Caption(v.Local.sTemp)
+		gui.Form.txtPREV.Text(v.Local.sRet(3))
+		gui.Form.txtTR.Text(v.Local.sRet(4))
+		gui.Form.txtRET.Text(v.Local.sRet(5))
+		gui.Form.txtEXT.Text(v.Local.sRet(6))
+		gui.Form.lblCustomer.Caption(v.Local.sRet(7))
+		gui.Form.lblPartDesc.Caption(v.Local.sRet(8))
+		gui.Form.txtSerial.Text(v.Local.sRet(9))
+	f.Intrinsic.Control.EndIf
+	
+	'Emp Init
+	f.Intrinsic.String.Build("select RTRIM(NAME) from V_EMPLOYEE_MSTR where RTRIM(EMPLOYEE)='{0}'", v.Local.sEMPID.Trim, v.Local.sSQL)
+	
+	f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Global.sEMPName)
+	f.Intrinsic.String.Split(v.Global.sEMPName," ", v.Local.sTemp)
+	f.Intrinsic.Control.If(v.Local.sTemp.UBound,>,0)
+		f.Intrinsic.String.Left(v.Local.sTemp(0),1,v.Local.sIN1)
+		f.Intrinsic.String.Left(v.Local.sTemp(v.Local.sTemp.UBound),1,v.Local.sIN2)
+		f.Intrinsic.String.Build("{0}{1}", v.Local.sIN1, v.Local.sIN2, v.Local.sEmpIN)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Left(v.Local.sTemp,1,v.Local.sEmpIN)
+	f.Intrinsic.Control.EndIf
+	
+	gui.Form.lblEmpIN.Caption(v.Local.sEmpIN)
+	
+'	f.Intrinsic.Control.CallSub(LoadSerial)
+	'==================================================
+	
+	
+	gui.Form..Show
+	
+	f.ODBC.Connection!Con.Close
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+	f.Intrinsic.Control.End
+f.Intrinsic.Control.EndTry
+
+Program.Sub.Main.End
+
+'Grid Labor from dtLabor
+Program.Sub.FormatGridLabor.Start
+f.Intrinsic.Control.Try
+	gui.Form.GsGcLabor.AddGridviewFromDatatable("gvLabor", "dtLabor")
+	gui.Form.GsGcLabor.MainView("gvLabor")
+	
+	'format
+	gui.Form.GsGcLabor.SetGridviewProperty("gvLabor", v.Enum.GridViewPropertyNames!EnableAppearanceOddRow, True)
+	gui.Form.GsGcLabor.SetGridviewProperty("gvLabor", v.Enum.GridViewPropertyNames!Editable, True)
+	gui.Form.GsGcLabor.SetGridviewProperty("gvLabor", v.Enum.GridViewPropertyNames!ReadOnly, False)
+	
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "JOB", v.Enum.ColumnPropertyNames!Visible, False)
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "SUFFIX", v.Enum.ColumnPropertyNames!Visible, False)
+	
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "JOB", v.Enum.ColumnPropertyNames!Caption, "JOB")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "SUFFIX", v.Enum.ColumnPropertyNames!Caption, "SUFFIX")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "SEQ", v.Enum.ColumnPropertyNames!Caption, "SEQ")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "OPERATION", v.Enum.ColumnPropertyNames!Caption, "OPERATION")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "EMPID", v.Enum.ColumnPropertyNames!Caption, "EMPID")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "TIME", v.Enum.ColumnPropertyNames!Caption, "TIME")
+	
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "JOB", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "SUFFIX", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "SEQ", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "OPERATION", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "EMPID", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "TIME", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "JOB", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "SUFFIX", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "SEQ", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "OPERATION", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "EMPID", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "TIME", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "JOB", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "SUFFIX", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "SEQ", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "EMPID", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	
+	
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "JOB", v.Enum.ColumnPropertyNames!MinWidth, 50)
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "SUFFIX", v.Enum.ColumnPropertyNames!MinWidth, 50)
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "SEQ", v.Enum.ColumnPropertyNames!MinWidth, 50)
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "OPERATION", v.Enum.ColumnPropertyNames!MinWidth, 260)
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "EMPID", v.Enum.ColumnPropertyNames!MinWidth, 50)
+	gui.Form.GsGcLabor.SetColumnProperty("gvLabor", "TIME", v.Enum.ColumnPropertyNames!MinWidth, 50)
+	
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.FormatGridLabor.End
+
+
+Program.Sub.Catching.Start
+f.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+Program.Sub.Catching.End
+
+Program.Sub.Unload.Start
+f.Intrinsic.Control.End
+Program.Sub.Unload.End
+
+Program.Sub.cmdSave_Click.Start
+f.Intrinsic.Control.Try
+
+	v.Local.sSQL.Declare(String)
+	v.Local.sTemp.Declare(String)
+
+	'save Labor dt
+	f.ODBC.Connection!Con.OpenCompanyConnection
+	
+	f.Data.Datatable.AcceptChanges("dtLabor")
+	f.Data.Datatable.SaveToDB("dtLabor", "Con", "GCG_6604_LABOR", "JOB*!*SUFFIX*!*SEQ", 256)
+	
+	'save Materials
+	'get values for Materials and insert
+#Region "Materials Seq"
+	'Anchor
+	f.Intrinsic.Control.If(v.Screen.Form!ddlAnchor.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='ANCHOR'", v.Screen.Form!ddlAnchor.Value, v.Screen.Form!txtAnchor.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Anchor Bushing
+	f.Intrinsic.Control.If(v.Screen.Form!ddlAnchorBushing.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='ANCHOR BUSHING'", v.Screen.Form!ddlAnchorBushing.Value, v.Screen.Form!txtAncorBushing.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Barrel
+	f.Intrinsic.Control.If(v.Screen.Form!ddlBarrel.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='BARREL'", v.Screen.Form!ddlBarrel.Value, v.Screen.Form!txtBarrel.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Stroke Res
+	f.Intrinsic.Control.If(v.Screen.Form!ddlStrokeRes.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='STROKE RESTRICTOR'", v.Screen.Form!ddlStrokeRes.Value, v.Screen.Form!txtStrokeRes.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Coupling
+	f.Intrinsic.Control.If(v.Screen.Form!ddlCoupling.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='COUPLING'", v.Screen.Form!ddlCoupling.Value, v.Screen.Form!txtCoupling.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Piping
+	f.Intrinsic.Control.If(v.Screen.Form!ddlPipingKit.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='PIPING KIT'", v.Screen.Form!ddlPipingKit.Value, v.Screen.Form!txtPipingKit.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Locknut
+	f.Intrinsic.Control.If(v.Screen.Form!ddlLocknut.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='LOCKNUT'", v.Screen.Form!ddlLocknut.Value, v.Screen.Form!txtLocknut.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Rod Bearing
+	f.Intrinsic.Control.If(v.Screen.Form!ddlRodBearing.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='ROD BEARING'", v.Screen.Form!ddlRodBearing.Value, v.Screen.Form!txtRodBearing.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Gland Bushing
+	f.Intrinsic.Control.If(v.Screen.Form!ddlGlandBushing.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='GLAND BUSHING'", v.Screen.Form!ddlGlandBushing.Value, v.Screen.Form!txtGlandBushing.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Seals
+	f.Intrinsic.Control.If(v.Screen.Form!ddlSeals.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='SEALS'", v.Screen.Form!ddlSeals.Value, v.Screen.Form!txtSeals.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Tie Rod
+	f.Intrinsic.Control.If(v.Screen.Form!ddl1TieRods.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='TIE RODS'", v.Screen.Form!ddl1TieRods.Value, v.Screen.Form!txtTieRods.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Bolts
+	f.Intrinsic.Control.If(v.Screen.Form!ddl1Bolts.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='BOLTS'", v.Screen.Form!ddl1Bolts.Value, v.Screen.Form!txtBolts.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Stem
+	f.Intrinsic.Control.If(v.Screen.Form!ddlStem.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='STEM'", v.Screen.Form!ddlStem.Value, v.Screen.Form!txtStem.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'CB Valves
+	f.Intrinsic.Control.If(v.Screen.Form!ddlCBValves.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='CB VALVES'", v.Screen.Form!ddlCBValves.Value, v.Screen.Form!txtCBValves.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Manifold
+	f.Intrinsic.Control.If(v.Screen.Form!ddlManifold.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='MANIFOLD'", v.Screen.Form!ddlManifold.Value, v.Screen.Form!txtManifold.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Photo
+	f.Intrinsic.Control.If(v.Screen.Form!ddlPhoto.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='PHOTO'", v.Screen.Form!ddlPhoto.Value, v.Screen.Form!txtPhoto.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Photo attached
+	f.Intrinsic.Control.If(v.Screen.Form!ddlPhotoAttached.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='PHOTO ATTACHED'", v.Screen.Form!ddlPhotoAttached.Value, v.Screen.Form!txtPhotoAttached.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'stem eye
+	f.Intrinsic.Control.If(v.Screen.Form!ddlStemEye.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='STEM EYE'", v.Screen.Form!ddlStemEye.Value, v.Screen.Form!txtStemEye.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Stem bushing
+	f.Intrinsic.Control.If(v.Screen.Form!ddlStemBushing.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='STEM EYE BUSHING'", v.Screen.Form!ddlStemBushing.Value, v.Screen.Form!txtStemBushing.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'packing gland
+	f.Intrinsic.Control.If(v.Screen.Form!ddlPackingGland.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='PACKING GLAND'", v.Screen.Form!ddlPackingGland.Value, v.Screen.Form!txtPackingGland.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Piston
+	f.Intrinsic.Control.If(v.Screen.Form!ddlPiston.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='PISTON'", v.Screen.Form!ddlPiston.Value, v.Screen.Form!txtPiston.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'End Cap
+	f.Intrinsic.Control.If(v.Screen.Form!ddlEndCap.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='END CAP'", v.Screen.Form!ddlEndCap.Value, v.Screen.Form!txtEndCap.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Gland ID
+	f.Intrinsic.Control.If(v.Screen.Form!ddlGlandIDLeak.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='GLAND (ID) SEAL LEAK'", v.Screen.Form!ddlGlandIDLeak.Value, v.Screen.Form!txtGlandIDLeak.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Gland OD
+	f.Intrinsic.Control.If(v.Screen.Form!ddlGlandODLeak.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='GLAND (OD) SEAL LEAK'", v.Screen.Form!ddlGlandODLeak.Value, v.Screen.Form!txtGlandODLeak.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Ext BP
+	f.Intrinsic.Control.If(v.Screen.Form!ddlExtrBypass.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='EXTREME BYPASS'", v.Screen.Form!ddlExtrBypass.Value, v.Screen.Form!txtExtrBypass.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'No BO
+	f.Intrinsic.Control.If(v.Screen.Form!ddlNoBypass.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='NO BYPASS'", v.Screen.Form!ddlNoBypass.Value, v.Screen.Form!txtNoBypass.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Welding Inc
+	f.Intrinsic.Control.If(v.Screen.Form!ddlWeldingInc.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='WELDING INCORRECT'", v.Screen.Form!ddlWeldingInc.Value, v.Screen.Form!txtWeldingInc.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'Stem Stover
+	f.Intrinsic.Control.If(v.Screen.Form!ddlStemStover.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='STEM STOVER LOCKNUT THREADS DAMAGE'", v.Screen.Form!ddlStemStover.Value, v.Screen.Form!txtStemStover.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'stem standard
+	f.Intrinsic.Control.If(v.Screen.Form!ddlStemStandard.Value,!=,"NOTOK")
+		f.Intrinsic.String.Build("update GCG_6604_MTRL set STATUS='{0}', COMMENT='{1}' where RTRIM(JOB)='{2}' and RTRIM(SUFFIX)='{3}' and RTRIM(PART)='STEM STANDARD LOCKNUT - REPLACE WITH STOVER'", v.Screen.Form!ddlStemStandard.Value, v.Screen.Form!txtStemStandard.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+		f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	'SUPERVISOR
+	f.Intrinsic.String.Build("update GCG_6604_MTRL set COMMENT='{0}' where RTRIM(JOB)='{1}' and RTRIM(SUFFIX)='{2}' and RTRIM(PART)='SUPERVISOR'", v.Screen.Form!txtSupervisor.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+	f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	
+#End Region ' Materials Seq
+
+	'save header
+#Region "header fields"
+	
+	f.Intrinsic.String.Format(v.Ambient.Date,"YYYY-MM-DD", v.Local.sTemp)
+	
+	f.Intrinsic.String.Build("update GCG_6604_WOHDR set EMPID='{0}', RPDATE='{1}', PREV='{2}', TR='{3}', SERIAL_NO='{4}', RET='{5}', EXT='{6}' where RTRIM(JOB)='{7}' and RTRIM(SUFFIX)='{8}'", v.Global.sEMPID, v.Local.sTemp, v.Screen.Form!txtPREV.Text, v.Screen.Form!txtRET.Text, v.Screen.Form!txtSerial.Text, v.Screen.Form!txtRET.Text, v.Screen.Form!txtEXT.Text, v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+	f.ODBC.Connection!Con.Execute(v.Local.sSQL)	
+	
+#End Region ' header fields
+
+	f.ODBC.Connection!Con.Close
+	f.Intrinsic.UI.Msgbox("SAVED!")
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+	f.ODBC.Connection!Con.Close
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdSave_Click.End
+
+'Apply to Serial
+Program.Sub.cmdApplyToSerial_Click.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	v.Local.sErrorMsg.Declare(String)
+	
+	f.Intrinsic.String.Build("Select RTRIM(A.SERIAL_START) SERIAL, B.APPLIED BSELECT From V_JOB_SERIAL A left join GCG_6604_APP_SERIAL B on A.JOB = B.JOB and A.SUFFIX = B.SUFFIX and RTRIM(A.SERIAL_START) = RTRIM(B.SERIALNO) where RTRIM(A.JOB)='{0}' and A.SUFFIX='{1}'", v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+	
+	f.Intrinsic.Control.if(v.DataTable.dtSerial.Exists)
+		f.Data.Datatable.Close("dtSerial")	
+	f.Intrinsic.Control.EndIf
+	
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.Datatable.CreateFromSQL("dtSerial", "Con", v.Local.sSQL, True)
+	f.ODBC.Connection!con.Close
+	
+	f.Intrinsic.Control.If(v.DataTable.dtSerial.RowCount,>,0)
+		gui.Form..Enabled(False)
+		f.Intrinsic.Control.CallSub(PopulateSerialGrid)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("Serial Not Found for WO#{0}-{1}", v.Global.sJob, v.Global.sSuffix, v.Local.sErrorMsg)
+		f.Intrinsic.UI.Msgbox(v.Local.sErrorMsg, "Serial Not Found")
+	f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdApplyToSerial_Click.End
+
+Program.Sub.PopulateSerialGrid.Start
+f.Intrinsic.Control.Try
+	gui.FormSerial.GsgcSerial.Visible(False)
+
+	gui.FormSerial.GsgcSerial.AddGridviewFromDatatable("gvSerial", "dtSerial")
+	gui.FormSerial.GsgcSerial.SetGridviewProperty("gvSerial", v.Enum.GridViewPropertyNames!EnableAppearanceOddRow,True)
+	gui.FormSerial.GsgcSerial.SetGridviewProperty("gvSerial", v.Enum.GridViewPropertyNames!Editable,True)
+	gui.FormSerial.GsgcSerial.SetGridviewProperty("gvSerial", v.Enum.GridViewPropertyNames!ReadOnly, False)
+	
+	gui.FormSerial.GsgcSerial.SetColumnProperty("gvSerial", "SERIAL", v.Enum.ColumnPropertyNames!Caption, "Serial Number")
+	gui.FormSerial.GsgcSerial.SetColumnProperty("gvSerial", "BSELECT", v.Enum.ColumnPropertyNames!Caption, "Select")
+	
+	gui.FormSerial.GsgcSerial.SetColumnProperty("gvSerial", "SERIAL", v.Enum.ColumnPropertyNames!AllowEdit, False)
+	
+	gui.FormSerial.GsgcSerial.SetColumnProperty("gvSerial", "SERIAL", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.FormSerial.GsgcSerial.SetColumnProperty("gvSerial", "BSELECT", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	
+	gui.FormSerial.GsgcSerial.SetColumnProperty("gvSerial", "SERIAL", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.FormSerial.GsgcSerial.SetColumnProperty("gvSerial", "BSELECT", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	
+	gui.FormSerial.GsgcSerial.SetColumnProperty("gvSerial", "SERIAL", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.FormSerial.GsgcSerial.SetColumnProperty("gvSerial", "BSELECT", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	
+	gui.FormSerial.GsgcSerial.MainView("gvSerial")
+	gui.FormSerial..Visible(True)
+	gui.FormSerial.GsgcSerial.Visible(True)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.PopulateSerialGrid.End
+
+Program.Sub.cmdApply_Click.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.iCounter.Declare(String)
+	v.Local.sSelected.Declare(String)
+	
+	f.Intrinsic.Control.CallSub(FormSerial_UnLoad)
+	f.Data.DataView.Create("dtSerial", "dvSelectedSerial", 22 ,"BSELECT=TRUE", "")
+	
+	f.Intrinsic.Control.If(v.DataTable.dtSelectedCustomer.Exists)
+		f.Data.Datatable.Close("dtSelectedSerial")
+	f.Intrinsic.Control.EndIf
+	f.Data.DataView.ToDataTable("dtSerial", "dvSelectedSerial", "dtSelectedSerial")
+	f.Data.DataView.Close("dtSerial", "dvSelectedSerial")
+	
+	f.ODBC.Connection!con.OpenCompanyConnection
+	
+	'remove old
+	f.Intrinsic.String.Build("delete from GCG_6604_APP_SERIAL where JOB='{0}' and SUFFIX='{1}'", v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+	f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	
+	'insert new
+	f.Intrinsic.Control.If(v.DataTable.dtSelectedSerial.RowCount,>,0)
+		
+		f.Intrinsic.Control.For(v.Local.iCounter, 0, v.DataTable.dtSelectedSerial.RowCount--, 1)
+			f.Intrinsic.String.Build("insert into GCG_6604_APP_SERIAL (JOB, SUFFIX, SERIALNO, APPLIED) values('{0}','{1}','{2}',1)", v.Global.sJob, v.Global.sSuffix, v.DataTable.dtSelectedSerial(v.Local.iCounter).SERIAL!FieldValTrim, v.Local.sSQL)
+			f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+			f.Intrinsic.Control.If(v.Local.iCounter,=,0)
+				v.Local.sSelected.Set(v.DataTable.dtSelectedSerial(v.Local.iCounter).SERIAL!FieldValTrim)
+			f.Intrinsic.Control.Else
+				f.Intrinsic.String.Build("{0},{1}", v.Local.sSelected, v.DataTable.dtSelectedSerial(v.Local.iCounter).SERIAL!FieldValTrim, v.Local.sSelected)
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.Next(v.Local.iCounter)
+	
+	f.Intrinsic.Control.EndIf
+	
+	f.Data.Datatable.Close("dtSelectedSerial")
+	
+	f.Intrinsic.Control.CallSub(LoadSerial)
+	
+	f.ODBC.Connection!con.Close
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+	f.ODBC.Connection!con.Close
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdApply_Click.End
+
+Program.Sub.LoadSerial.Start
+f.Intrinsic.Control.Try
+	v.Local.sRet.Declare(String)
+	v.Local.sSQL.Declare(String)
+	f.Intrinsic.String.Build("select RTRIM(SERIALNO) SERIAL from GCG_6604_APP_SERIAL where JOB='{0}' and SUFFIX='{1}'", v.Global.sJob, v.Global.sSuffix, v.Local.sSQL)
+	f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRet)
+	
+	f.Intrinsic.Control.If(v.Local.sRet,!=,"")
+		f.Intrinsic.String.Replace(v.Local.sRet,"#$#", ",", v.Local.sRet)
+		gui.Form.txtSerialNo.Text(v.Local.sRet)
+	f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.LoadSerial.End
+
+Program.Sub.chkSelectAll_Change.Start
+f.Intrinsic.Control.Try
+	v.Local.bCheck.Declare(Boolean)
+	v.Local.bCheck.Set(v.Screen.FormSerial!chkSelectAll.Value)
+	
+	f.Intrinsic.Control.If(v.Local.bCheck,=,True)
+		f.Data.Datatable.SetValue("dtSerial", -1, "BSELECT", True)
+		f.Intrinsic.Control.CallSub(PopulateSerialGrid)
+	f.Intrinsic.Control.else
+		f.Data.Datatable.SetValue("dtSerial", -1, "BSELECT", False)
+		f.Intrinsic.Control.CallSub(PopulateSerialGrid)
+	f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.chkSelectAll_Change.End
+
+Program.Sub.FormSerial_UnLoad.Start
+gui.FormSerial..Visible(false)
+gui.Form..Enabled(True)
+gui.Form..AlwaysOnTop(True)
+gui.Form..AlwaysOnTop(False)
+
+Program.Sub.FormSerial_UnLoad.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$nle$}$20220225124719524$}$kjzCRYkA6UEoRnCwndYnRbFO/s06+5AM52dhNaRQOynGR89vN70D/qx93cN/VPUj
+Program.Sub.Comments.End
